@@ -1,0 +1,224 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  /* Custom cursor */
+  .custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background-color: #1ac5d1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+    z-index: 1000;
+  }
+  
+  a:hover, button:hover, .interactive:hover {
+    cursor: url('./img/cursor.png'), pointer;
+  }
+  
+  a:hover .custom-cursor, button:hover .custom-cursor {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .interactive:hover {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Vertical lines */
+  .vertical-lines::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 24.5%,
+      rgba(0, 123, 255, 0.08) 25%,
+      transparent 25.1%
+    );
+    animation: moveLines 20s linear infinite;
+    z-index: -1;
+  }
+  
+  /* Layout */
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 1.5rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .left-panel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  
+  .profile-img {
+    width: 500px;
+    height: auto;
+    object-fit: fill;
+    margin-left: 190px;
+    clip-path: polygon(30% 0, 90% 30%, 95% 90%, 0% 90%);
+  }
+  
+  .name {
+    font-size: 2rem;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    margin-left:80px;
+  }
+  
+  .contact a {
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .contact a i {
+    color: #007BFF;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact a:hover {
+    color: #0056b3;
+    transform: translateX(4px);
+  }
+  
+  .contact a:hover i {
+    transform: scale(1.2);
+  }
+  
+  /* Right panel */
+  .right-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding-right: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007BFF;
+  }
+  
+  .intro {
+    font-size: 1.5rem;
+    font-style: oblique;
+    font-weight: bold;
+    line-height: 1.4;
+    max-width: 500px;
+    margin-left: 40px;
+    margin-bottom: 280px;
+  }
+  
+  .highlight {
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  /* Social Icons */
+  .social-vertical {
+    position: fixed;
+    right: 1rem;
+    top: 70%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .rotate {
+    writing-mode: vertical-rl;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: #777;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icons a {
+    margin: 0.6rem 0;
+    font-size: 1.2rem;
+    color: #222;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .icons a:hover {
+    transform: scale(1.2);
+    color: #007BFF;
+  }
+  
+  .icons img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  @keyframes moveLines {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100px 0;
+    }
+  }
+  
