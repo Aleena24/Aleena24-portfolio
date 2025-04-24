@@ -13,10 +13,10 @@
     <link rel="icon" href="img/logo/AV.ico" type="image/x-icon">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="about.css" type="text/css">
 </head>
 
 <body>
@@ -38,52 +38,29 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-
+                <div class="right-panel">
+                  <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="passion.html">Passion</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="project.html">Project</a>
+                  </nav>
+                  <div class="social-vertical">
+                    <span class="rotate">Follow Me</span>
+                    <span class="rotate"><b>-------></b></span>
+                    <div class="icons">
+                      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-medium"></i></a>
+                      <a href="https://github.com/yourhandle" target="_blank"><i class="fab fa-github"></i></a>
+                      <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a> 
                     </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="header__nav__option">
-                        <nav class="header__nav__menu mobile-menu">
-                            <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li class="active"><a href="./about.html">About</a></li>
-                                <li><a href="./project.html">Project</a></li>
-                                <li><a href="./passion.html">Passion</a></li>    
-                                <li><a href="./contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__nav__social">
-                            <a href="https://www.linkedin.com/in/aleena-varghese-atv024/"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://github.com/Aleena24"><i class="fa fa-github"></i></a>
-                            <a href="https://medium.com/@alinavarghese009"><i class="fa fa-medium"></i></a>
-                        </div>
-                    </div>
-                </div>
+                  </div>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
     <!-- Header End -->
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>About Me</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>About</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Breadcrumb End -->
 
     <!-- About Section Begin -->
     <section class="about spad">
@@ -112,7 +89,7 @@
                 <div class="col-lg-6">
                     <div class="about__text">
                         <div class="section-title">
-                            <span>About Me</span>
+                      
                             <h2>What can I do ?</h2>
                         </div>
                         <div class="row">
@@ -152,8 +129,12 @@
         </div>
     </section>
     <!-- About Section End -->
+
+
     <section id="education" class="education-section">
-        <h2 class="section-title">Education</h2>
+      <div class="section-title-education">
+        <h2>Education</h2>
+      </div>
         <div class="education-timeline">
           <div class="education-item">
             <h3>MSc in Artificial Intelligence and Machine Learning</h3>
@@ -174,18 +155,20 @@
       </section>
 
       <section id="internships" class="internships-section">
-        <h2 class="section-title">Internships</h2>
+        <div class="section-title-internships">
+          <h2>Professional Experience</h2>
+        </div>
         <div class="internships-container">
 
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <h3>AI/ML Engineer</h3>
+                <h3>AIML Engineer</h3>
                 <img src="img/logo/logo-8.jpg" alt="Pysqli Logo">
                 <h3>SenseSys Pvt. Ltd</h3>
               </div>
               <div class="flip-card-back">
-                <a href="https://nextuempower.com/"><h3>AI/ML Engineer</h3></a>
+                <a href="https://nextuempower.com/"><h3>AIML Engineer</h3></a>
                 <p>Duration: January 2025 - present</p>
                 <p>As an AIML Engineer at SenseSys, I work on developing intelligent data visualization tools, automating cloud-based workflows, and building AI-powered systems for content generation and social media management.</p>
               </div>
@@ -210,12 +193,12 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <h3>Machine Learning Engineer</h3>
+                <h3>ML Engineer Intern</h3>
                 <img src="img/logo/prodigy.jpeg" alt="Company 2 Logo">
                 <h3>Prodigy Infotech</h3>
               </div>
               <div class="flip-card-back">
-                <a href="https://prodigyinfotech.dev/"><h3>Machine Learning Engineer</h3></a>
+                <a href="https://prodigyinfotech.dev/"><h3>Machine Learning Engineer Intern</h3></a>
                 <p>Duration: April 2024 - May 2024</p>
                 <p>Prodigy InfoTech | intern</p>
                 <p>Acquired hands-on experience in designing, training, and evaluating machine learning models to generate actionable insights.</p>
@@ -226,12 +209,12 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <h3>Python Developer</h3>
+                <h3>Python Developer Intern</h3>
                 <img src="img/logo/psyliq.png" alt="Pysqli Logo">
                 <h3>Psyliq</h3>
               </div>
               <div class="flip-card-back">
-                <a href="https://psyliq.com/"><h3>Python Developer</h3></a>
+                <a href="https://psyliq.com/"><h3>Python Developer Intern</h3></a>
                 <p>Duration: May 2024 - June 2024</p>
                 <p>Psyliq | intern</p>
                 <p>Developed expertise in gathering, analyzing, and visualizing data using Python, extracting valuable insights to drive data-centric initiatives.</p>

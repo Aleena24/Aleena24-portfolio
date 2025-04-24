@@ -1,0 +1,397 @@
+/* Right panel */
+.right-panel {
+  width: auto;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 700px;
+  flex-direction: column;
+  align-items: right;
+  justify-content: space-between;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-right: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+/* Social Icons */
+.social-vertical {
+  position: fixed;
+  right: 1rem;
+  top: 70%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.rotate {
+  writing-mode: vertical-rl;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #777;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons a {
+  margin: 0.6rem 0;
+  font-size: 1.2rem;
+  color: #222;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+  color: #007BFF;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  background: white;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about__pic {
+  padding-right: 30px;
+}
+
+.about__pic__item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about__pic__item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.about__pic__item--large {
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.about__pic__item:not(.about__pic__item--large) {
+  height: 160px;
+  margin-bottom: 20px;
+}
+
+/* About Text Section */
+.about__text {
+  padding-left: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.5em;
+  color: #091d6b;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #091d6b;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+/* Services Section Style */
+.services__item {
+  background: #151a30;
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.services__item:hover {
+  background-color: #1e223a;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.services__item__icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.services__item:hover .services__item__icon img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.services__item h4 {
+  font-size: 1.4em;
+  color: #f9ca24;
+  margin-bottom: 10px;
+}
+
+.services__item p {
+  color: #ddd;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* About Description */
+.about__text__desc {
+  margin-top: 20px;
+  width: auto;
+  font-size: 1.1em;
+  color: #1d0854;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.about__text__desc:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* =================== Education Section =================== */
+.education-section {
+  background: #f0f4f8;
+  padding: 60px 20px;
+}
+
+.education-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section-title-education {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-education h2 {
+  font-size: 2.5em;
+  color: #091d6b;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-education h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #091d6b;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.education-item {
+  background: #ffffff;
+  border-left: 6px solid #007BFF;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-item h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #003366;
+}
+
+.education-item span {
+  display: block;
+  font-weight: 500;
+  color: #555;
+  margin-top: 5px;
+}
+
+.education-item p span {
+  color: #888;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* =================== Internships Section =================== */
+.internships-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.internships-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.section-title-internships {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-internships h2 {
+  font-size: 2.5em;
+  color: #003366;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-internships h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #003772;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 360px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front h3,
+.flip-card-back h3 {
+  font-size: 1.2rem;
+  color: #1b62a9;
+  margin: 10px 0;
+  font-weight: bolder;
+}
+
+.flip-card-front img {
+  max-height: 80px;
+  margin: 10px 0;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.flip-card-back {
+  background-color: #003772;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  font-size: 0.95rem;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.flip-card-back a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.flip-card-back a:hover {
+  text-decoration: underline;
+}
+
+/* =================== Responsive =================== */
+@media screen and (max-width: 991px) {
+  .about__pic, .about__text {
+    padding: 0;
+  }
+
+  .about__pic__item--large {
+    height: 280px;
+  }
+
+  .about__pic__item:not(.about__pic__item--large) {
+    height: 140px;
+  }
+
+  .education-item,
+  .flip-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .internships-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
