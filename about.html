@@ -36,6 +36,14 @@
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container">
+                  <div class="header-content">
+            <!-- Logo on the left -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/logo/logo.jpg" alt="Aleena Varghese Logo">
+                  
+                </a>
+            </div>
             <div class="row">
                 <div class="right-panel">
                   <nav>
@@ -46,8 +54,8 @@
                     <a href="project.html">Project</a>
                   </nav>
                   <div class="social-vertical">
-                    <span class="rotate">Follow Me</span>
-                    <span class="rotate"><b>------></b></span>
+                    <span class="rotate"><b>Let's Connect</b></span>
+                    <span class="rotate"><b> ------></b></span>
                     <div class="icons">
                       <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                       <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-medium"></i></a>
@@ -61,71 +69,89 @@
     </header>
     <!-- Header End -->
 
-    <!-- About Section Begin -->
-    <section class="about spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about__pic">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="about__pic__item about__pic__item--large set-bg"
-                                    data-setbg="img/about/about-4.png"></div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="about__pic__item set-bg" data-setbg="img/about/about-2.jpg"></div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="about__pic__item set-bg" data-setbg="img/about/about-3.jpg"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about__text">
-                        <div class="section-title">
-                            <h2>What can I do ?</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="services__item">
-                                    <div class="services__item__icon">
-                                        <img src="img/icons/si-1.png" alt="">
-                                    </div>
-                                    <h4>AI & ML</h4>
-                                    <p align="justify">Leveraging advanced AI/ML techniques to develop an intuitive and 
-                                       cutting-edge website that showcases the future of intelligent systems 
-                                       and technology.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="services__item">
-                                    <div class="services__item__icon">
-                                        <img src="img/icons/si-3.png" alt="">
-                                    </div>
-                                    <h4>Video Editing & Graphic Designing</h4>
-                                    <p align="justify">Transforming ideas into dynamic visual stories, one frame at a time, 
-                                       and crafting impactful poster designs that captivate and communicate.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div align="justify" class="about__text__desc">
-                            <p>As an AI/ML student, I am passionate about the potential of intelligent systems 
-                                and their transformative impact on industries. I actively explore machine learning 
-                                algorithms, neural networks, and AI applications through hands-on projects using 
-                                Python and frameworks like Streamlit, Django,TensorFlow and PyTorch. 
-                                In addition to my technical interests, I have a creative side, expressing myself 
-                                through Graphic Design and Video Editing.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Enhanced About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <!-- Image Gallery -->
+      <div class="about-gallery">
+        <div class="main-image">
+          <img src="img/about/about-4.png" alt="Aleena working on AI project" class="img-fluid">
+          <div class="image-overlay">
+            <span>AI Enthusiast</span>
+          </div>
         </div>
-    </section>
+        <div class="secondary-images">
+          <div class="small-image">
+            <img src="img/about/about-2.jpg" alt="Aleena coding" class="img-fluid">
+            <div class="image-overlay">
+              <span>Designer</span>
+            </div>
+          </div>
+          <div class="small-image">
+            <img src="img/about/about-3.jpg" alt="Aleena designing" class="img-fluid">
+            <div class="image-overlay">
+              <span>Editor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Text -->
+      <div class="about-text">
+        <div class="section-header">
+          <h2>My Expertise</h2>
+          <div class="divider"></div>
+          <p class="subtitle">Bridging AI innovation with creative expression</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="skill-content">
+              <h3>AI & Machine Learning</h3>
+              <p>Developing intelligent systems using cutting-edge ML algorithms, neural networks, and deep learning frameworks to solve real-world problems.</p>
+              <ul class="skill-tags">
+                <li>TensorFlow</li>
+                <li>PyTorch</li>
+                <li>Computer Vision</li>
+                <li>NLP</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="skill-content">
+              <h3>Creative Design</h3>
+              <p>Crafting compelling visual narratives through graphic design and video editing to communicate complex ideas effectively.</p>
+              <ul class="skill-tags">
+                <li>Adobe Premiere</li>
+                <li>DaVinci Resolve</li>
+                <li>Canva</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-description">
+          <p>As a <b>MSc Artificial Intelligence and Machine Learning</b> student from <b>CHRIST (Deemed to be University)</b>, I combine technical expertise in machine learning with creative problem-solving skills. My projects demonstrate proficiency in:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Building end-to-end AI solutions from data collection to deployment</li>
+            <li><i class="fas fa-check-circle"></i> Developing interactive web applications with Streamlit and FasAPI</li>
+            <li><i class="fas fa-check-circle"></i> Creating data visualizations that tell compelling stories</li>
+            <li><i class="fas fa-check-circle"></i> Designing user-friendly interfaces for technical systems</li>
+          </ul>
+          <p>When I'm not training models, you'll find me editing videos or designing posters that blend aesthetic appeal with technical accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- About Section End -->
 
     <section id="education" class="education-section">
