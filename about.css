@@ -1,5 +1,52 @@
-body{
+/* ========== GLOBAL STYLES ========== */
+body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+  background: transparent;
+}
+
+/* ========== PARTICLE BACKGROUND ========== */
+.interactive-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#particle-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f0f4f8;
+}
+
+.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1px);
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -8,39 +55,23 @@ body{
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 20px;
   padding: 0 20px;
-}
-
-.right-panel {
-  display: flex;
-  align-items: center;
-}
-
-nav {
-  margin-right: 40px; /* Space between nav and social */
-}
-.logo {
-  display: flex;
-  align-items: center;
 }
 
 .logo img {
   height: 40px;
   width: auto;
-  margin-right: 10px;
 }
+
 nav {
   display: flex;
-  justify-content: flex-end;
   gap: 2rem;
-  padding-right: 1rem;
 }
 
 nav a {
   text-decoration: none;
-  font-weight: 500;
   color: #333;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -48,13 +79,11 @@ nav a:hover {
   color: #007BFF;
 }
 
-/* Social Icons */
 .social-vertical {
   position: fixed;
   right: 1rem;
-  top: 70%;
+  top: 50%;
   transform: translateY(-50%);
-  margin-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,42 +115,19 @@ nav a:hover {
   color: #007BFF;
 }
 
-.icons img {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2s ease;
-}
-
-.icons img:hover {
-  transform: scale(1.2);
-}
-
-/* Enhanced About Section Styles */
+/* ========== ABOUT SECTION ========== */
 .about-section {
   padding: 100px 0;
-  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
   position: relative;
-  overflow: hidden;
-}
-
-.about-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(0,123,255,0.03)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
-  background-size: cover;
-  z-index: 0;
 }
 
 .about-content {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  position: relative;
-  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .about-gallery {
@@ -129,8 +135,8 @@ nav a:hover {
   min-width: 300px;
   display: grid;
   grid-template-areas: 
-    "main main"
-    "secondary1 secondary2";
+      "main main"
+      "secondary1 secondary2";
   gap: 20px;
 }
 
@@ -308,62 +314,12 @@ nav a:hover {
   color: #007bff;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .about-content {
-    flex-direction: column;
-  }
-  
-  .about-gallery {
-    grid-template-areas: 
-      "main main"
-      "secondary1 secondary2";
-  }
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    padding: 70px 0;
-  }
-  
-  .section-header h2 {
-    font-size: 2rem;
-  }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 576px) {
-  .about-gallery {
-    grid-template-areas: 
-      "main"
-      "secondary1"
-      "secondary2";
-  }
-  
-  .secondary-images {
-    flex-direction: column;
-  }
-  
-  .about-description {
-    padding: 20px;
-  }
-}
-/* =================== Education Section =================== */
+/* ========== EDUCATION SECTION ========== */
 .education-section {
   background: #f0f4f8;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
-.education-timeline {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
 .section-title-education {
   text-align: center;
   margin-bottom: 40px;
@@ -387,6 +343,14 @@ nav a:hover {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
+}
+
+.education-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .education-item {
@@ -421,18 +385,12 @@ nav a:hover {
   margin-top: 5px;
 }
 
-/* =================== Internships Section =================== */
+/* ========== INTERNSHIPS SECTION ========== */
 .internships-section {
   background-color: #ffffff;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
-.internships-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
 .section-title-internships {
   text-align: center;
   margin-bottom: 40px;
@@ -456,6 +414,15 @@ nav a:hover {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
+}
+
+.internships-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .flip-card {
@@ -483,7 +450,6 @@ nav a:hover {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background: #f8f9fa;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -493,10 +459,13 @@ nav a:hover {
   justify-content: center;
 }
 
-.flip-card-front h3,
-.flip-card-back h3 {
-  font-size: 1.2rem;
+.flip-card-front {
+  background: #f8f9fa;
   color: #1b62a9;
+}
+
+.flip-card-front h3 {
+  font-size: 1.2rem;
   margin: 10px 0;
   font-weight: bolder;
 }
@@ -512,6 +481,11 @@ nav a:hover {
   background-color: #003772;
   color: white;
   transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
 .flip-card-back p {
@@ -530,7 +504,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ======================= Skills Carousel Section ======================= */
+/* ========== SKILLS CAROUSEL ========== */
 .skills-carousel-section {
   padding: 80px 20px;
   background-color: #f0f4f8;
@@ -560,7 +534,6 @@ nav a:hover {
   border-radius: 2px;
 }
 
-/* Skills Carousel Container */
 .skills-carousel-container {
   overflow: hidden;
   position: relative;
@@ -616,8 +589,7 @@ nav a:hover {
   margin: 0;
 }
 
-/* ======================= Skills Flip Cards Section ======================= */
-/* Enhanced Skills Flip Cards Section */
+/* ========== SKILLS FLIP CARDS ========== */
 .skills-flip-section {
   padding: 80px 0;
   background-color: #f8f9fa;
@@ -678,7 +650,7 @@ nav a:hover {
 
 .skill-flip-card {
   perspective: 1000px;
-  height: 220px; /* Increased height */
+  height: 220px;
 }
 
 .skill-flip-inner {
@@ -770,97 +742,7 @@ nav a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Scrollbar styling for flip-back */
-.skill-flip-back::-webkit-scrollbar {
-  width: 5px;
-}
-
-.skill-flip-back::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-}
-
-.skill-flip-back::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-}
-
-/* Hover Effects */
-.skill-flip-card:hover .skill-flip-front {
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
-}
-
-.skill-flip-card:hover .skill-flip-back {
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .skills-flip-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 992px) {
-  .skills-flip-section {
-    padding: 60px 0;
-  }
-  
-  .skill-flip-card {
-    height: 200px;
-  }
-  
-  .skill-flip-front h3 {
-    font-size: 1.3rem;
-  }
-  
-  .skill-list li {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-flip-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  
-  .skill-flip-card {
-    height: 180px;
-  }
-  
-  .skill-flip-front,
-  .skill-flip-back {
-    padding: 20px;
-  }
-  
-  .skill-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .skills-flip-title h2 {
-    font-size: 2rem;
-  }
-  
-  .skills-flip-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .skill-flip-card {
-    height: 160px;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  
-  .skill-list li {
-    font-size: 0.85rem;
-  }
-}
-
-/* =================== Publications Section =================== */
+/* ========== PUBLICATIONS SECTION ========== */
 .publications-section {
   padding: 80px 20px;
   background-color: #ffffff;
@@ -942,7 +824,7 @@ nav a:hover {
   background-color: #218838;
 }
 
-/* =================== Achievements Section =================== */
+/* ========== ACHIEVEMENTS SECTION ========== */
 .achievements-section {
   padding: 80px 90px;
   background-color: #f0f4f8;
@@ -1017,10 +899,10 @@ nav a:hover {
   left: -12px;
 }
 
-/* =================== Counter Section =================== */
+/* ========== COUNTER SECTION ========== */
 .counter {
   padding: 80px 0;
-  background: f0f4f8;
+  background: #ffffff;
   margin-bottom: 0;
   color: rgb(0, 0, 0);
 }
@@ -1054,13 +936,12 @@ nav a:hover {
   margin: 0;
 }
 
-/* =================== Footer Section =================== */
+/* ========== FOOTER ========== */
 .footer {
   background-color: #ffffff;
   color: rgb(23, 21, 21);
   padding: 0 0 20px;
 }
-
 
 .footer__copyright__text {
   margin: 0;
@@ -1074,145 +955,138 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* =================== Responsive Styles =================== */
-@media (max-width: 991px) {
-  .right-panel {
-    margin-left: auto;
-    padding-right: 20px;
-  }
-  
-  .about__pic, .about__text {
-    padding: 0;
-  }
-
-  .about__pic__item--large {
-    height: 280px;
-  }
-
-  .about__pic__item:not(.about__pic__item--large) {
-    height: 140px;
-  }
-
-  .education-item,
-  .flip-card {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .internships-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .skills-carousel-track {
-    gap: 20px;
-    animation-duration: 20s;
-  }
-  
-  .skill-carousel-item {
-    width: 100px;
-    padding: 15px 10px;
-  }
-  
-  .skill-carousel-item img {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .skill-carousel-item p {
-    font-size: 14px;
-  }
-  
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 1200px) {
   .skills-flip-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .skills-flip-section {
+      padding: 60px 0;
   }
   
   .skill-flip-card {
-    height: 120px;
+      height: 200px;
+  }
+  
+  .skill-flip-front h3 {
+      font-size: 1.3rem;
+  }
+  
+  .skill-list li {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-flip-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+  }
+  
+  .skill-flip-card {
+      height: 180px;
   }
   
   .skill-flip-front,
   .skill-flip-back {
-    font-size: 1em;
+      padding: 20px;
   }
   
-  .skill-flip-back p {
-    font-size: 14px;
+  .skill-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+  }
+  
+  .achievements-section {
+      padding: 60px 20px;
   }
   
   .achievements-timeline::before {
-    left: 31px;
+      left: 31px;
   }
   
   .timeline-item {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
   }
   
   .timeline-item:nth-child(even) {
-    left: 0;
+      left: 0;
   }
   
   .timeline-item::after {
-    left: 21px;
+      left: 21px;
   }
   
   .timeline-item:nth-child(odd)::after,
   .timeline-item:nth-child(even)::after {
-    left: 21px;
+      left: 21px;
   }
 }
 
-@media (max-width: 767px) {
-  .counter__item {
-    margin-bottom: 30px;
-  }
-  
-}
-
-@media (max-width: 480px) {
-  .skills-carousel-section,
-  .skills-flip-section {
-    padding: 60px 10px;
-  }
-  
-  .skills-carousel-title h2,
+@media (max-width: 576px) {
   .skills-flip-title h2 {
-    font-size: 2rem;
-  }
-  
-  .skill-carousel-item {
-    width: 80px;
-    padding: 10px;
-  }
-  
-  .skill-carousel-item img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
-  }
-  
-  .skill-carousel-item p {
-    font-size: 12px;
+      font-size: 2rem;
   }
   
   .skills-flip-grid {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
+  }
+  
+  .skill-flip-card {
+      height: 160px;
+      max-width: 320px;
+      margin: 0 auto;
+  }
+  
+  .skill-list li {
+      font-size: 0.85rem;
   }
   
   .publications-container {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   }
   
   .publication-buttons {
-    flex-direction: column;
-    gap: 10px;
+      flex-direction: column;
+      gap: 10px;
   }
   
   .btn-view, .btn-download {
-    width: 100%;
-    text-align: center;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .header-content {
+      flex-direction: column;
+  }
+  
+  nav {
+      margin: 20px 0;
+      justify-content: center;
+  }
+  
+  .social-vertical {
+      position: static;
+      transform: none;
+      flex-direction: row;
+      margin-top: 20px;
+  }
+  
+  .rotate {
+      writing-mode: horizontal-tb;
+      margin: 0 10px 0 0;
+  }
+  
+  .icons {
+      flex-direction: row;
+  }
+  
+  .icons a {
+      margin: 0 10px;
   }
 }

@@ -25,681 +25,730 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="about.css" type="text/css">
+
+    <style>
+        /* ========== Particle Background ========== */
+        .interactive-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #particle-canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #f0f4f8;
+        }
+
+        .color-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(1px);
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: transparent;
+        }
+
+        /* Ensure body has no margin/padding */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Header styles to ensure it's above the background */
+        .header {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Particle Background -->
+    <div class="interactive-bg">
+        <canvas id="particle-canvas"></canvas>
+        <div class="color-overlay"></div>
+    </div>
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-                  <div class="header-content">
-            <!-- Logo on the left -->
-            <div class="logo">
-                <a href="index.html">
-                    <img src="./img/logo/logo.jpg" alt="Aleena Varghese Logo">
-                  
-                </a>
-            </div>
-            <div class="row">
-                <div class="right-panel">
-                  <nav>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Me</a>
-                    <a href="passion.html">Passion</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="project.html">Project</a>
-                  </nav>
-                  <div class="social-vertical">
-                    <span class="rotate"><b>Let's Connect</b></span>
-                    <span class="rotate"><b> ------></b></span>
-                    <div class="icons">
-                      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-medium"></i></a>
-                      <a href="https://github.com/yourhandle" target="_blank"><i class="fab fa-github"></i></a>
-                      <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a> 
+    <div class="content-wrapper">
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo on the left -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./img/logo/logo.jpg" alt="Aleena Varghese Logo">
+                        </a>
                     </div>
-                  </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
-    <!-- Header End -->
-
-<!-- Enhanced About Section -->
-<section class="about-section">
-  <div class="container">
-    <div class="about-content">
-      <!-- Image Gallery -->
-      <div class="about-gallery">
-        <div class="main-image">
-          <img src="img/about/about-4.png" alt="Aleena working on AI project" class="img-fluid">
-          <div class="image-overlay">
-            <span>AI Enthusiast</span>
-          </div>
-        </div>
-        <div class="secondary-images">
-          <div class="small-image">
-            <img src="img/about/about-2.jpg" alt="Aleena coding" class="img-fluid">
-            <div class="image-overlay">
-              <span>Designer</span>
-            </div>
-          </div>
-          <div class="small-image">
-            <img src="img/about/about-3.jpg" alt="Aleena designing" class="img-fluid">
-            <div class="image-overlay">
-              <span>Editor</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- About Text -->
-      <div class="about-text">
-        <div class="section-header">
-          <h2>My Expertise</h2>
-          <div class="divider"></div>
-          <p class="subtitle">Bridging AI innovation with creative expression</p>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <div class="skill-content">
-              <h3>AI & Machine Learning</h3>
-              <p>Developing intelligent systems using cutting-edge ML algorithms, neural networks, and deep learning frameworks to solve real-world problems.</p>
-              <ul class="skill-tags">
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-                <li>Computer Vision</li>
-                <li>NLP</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-paint-brush"></i>
-            </div>
-            <div class="skill-content">
-              <h3>Creative Design</h3>
-              <p>Crafting compelling visual narratives through graphic design and video editing to communicate complex ideas effectively.</p>
-              <ul class="skill-tags">
-                <li>Adobe Premiere</li>
-                <li>DaVinci Resolve</li>
-                <li>Canva</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-description">
-          <p>As a <b>MSc Artificial Intelligence and Machine Learning</b> student from <b>CHRIST (Deemed to be University)</b>, I combine technical expertise in machine learning with creative problem-solving skills. My projects demonstrate proficiency in:</p>
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle"></i> Building end-to-end AI solutions from data collection to deployment</li>
-            <li><i class="fas fa-check-circle"></i> Developing interactive web applications with Streamlit and FasAPI</li>
-            <li><i class="fas fa-check-circle"></i> Creating data visualizations that tell compelling stories</li>
-            <li><i class="fas fa-check-circle"></i> Designing user-friendly interfaces for technical systems</li>
-          </ul>
-          <p>When I'm not training models, you'll find me editing videos or designing posters that blend aesthetic appeal with technical accuracy.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- About Section End -->
-
-    <section id="education" class="education-section">
-      <div class="section-title-education">
-        <h2>Education</h2>
-      </div>
-        <div class="education-timeline">
-          <div class="education-item">
-            <h3>MSc in Artificial Intelligence and Machine Learning</h3>
-            <span>CHRIST (Deemed to be University), Bangalore, Karnataka</span>
-            <p><span>2023 - Present</span></p>
-          </div>
-          <div class="education-item">
-            <h3>Bachelor's of Computer Applications</h3>
-            <span>Christ College, Rajkot, Gujarat</span>
-            <p><span>2020 - 2023</span></p>
-          </div>
-          <div class="education-item">
-            <h3>Higher Secondary</h3>
-            <span>Nirmala Convent School, Rajkot, Gujarat</span>
-            <p><span>2018 - 2020</span></p>
-          </div>
-        </div>
-      </section>
-
-      <section id="internships" class="internships-section">
-        <div class="section-title-internships">
-          <h2>Professional Experience</h2>
-        </div>
-        <div class="internships-container">
-
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h3>AIML Engineer</h3>
-                <img src="img/logo/logo-8.jpg" alt="Pysqli Logo">
-                <h3>SenseSys Pvt. Ltd</h3>
-              </div>
-              <div class="flip-card-back">
-                <a href="https://nextuempower.com/"><h3>AIML Engineer</h3></a>
-                <p>Duration: January 2025 - present</p>
-                <p>As an AIML Engineer at SenseSys, I work on developing intelligent data visualization tools, automating cloud-based workflows, and building AI-powered systems for content generation and social media management.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h3>Graphic Designer</h3>
-                <img src="img/logo/nextu.jpeg" alt="Pysqli Logo">
-                <h3>NextU Empower</h3>
-              </div>
-              <div class="flip-card-back">
-                <a href="https://nextuempower.com/"><h3>Graphic Designer</h3></a>
-                <p>Duration: September 2024 - December 2024</p>
-                <p>Designing visually engaging graphics and creating promotional videos for web and social media, focusing on enhancing brand identity and user engagement.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h3>ML Engineer Intern</h3>
-                <img src="img/logo/prodigy.jpeg" alt="Company 2 Logo">
-                <h3>Prodigy Infotech</h3>
-              </div>
-              <div class="flip-card-back">
-                <a href="https://prodigyinfotech.dev/"><h3>Machine Learning Engineer Intern</h3></a>
-                <p>Duration: April 2024 - May 2024</p>
-                <p>Prodigy InfoTech | intern</p>
-                <p>Acquired hands-on experience in designing, training, and evaluating machine learning models to generate actionable insights.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h3>Python Developer Intern</h3>
-                <img src="img/logo/psyliq.png" alt="Pysqli Logo">
-                <h3>Psyliq</h3>
-              </div>
-              <div class="flip-card-back">
-                <a href="https://psyliq.com/"><h3>Python Developer Intern</h3></a>
-                <p>Duration: May 2024 - June 2024</p>
-                <p>Psyliq | intern</p>
-                <p>Developed expertise in gathering, analyzing, and visualizing data using Python, extracting valuable insights to drive data-centric initiatives.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Skills Carousel Section -->
-      <section class="skills-carousel-section">
-        <h2 class="skills-carousel-title">Technical Skills</h2>
-        <div class="skills-carousel-container">
-          <div class="skills-carousel-track">
-            <div class="skill-carousel-item">
-              <img src="img/logo/py.png" alt="Python">
-              <p>Python</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/canva.png" alt="Canva">
-              <p>Canva</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/da.png" alt="Da Vinci">
-              <p>Da Vinci</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/css.png" alt="CSS">
-              <p>CSS</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/docker.png" alt="Docker">
-              <p>Docker</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/react.jpg" alt="React">
-              <p>React</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/js.png" alt="JavaScript">
-              <p>JavaScript</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/aws.png" alt="AWS">
-              <p>AWS</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/bs.png" alt="Bootstrap">
-              <p>Bootstrap</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/stream.png" alt="Streamlit">
-              <p>Streamlit</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/sql.png" alt="MySQL">
-              <p>MySQL</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/postgres.png" alt="Postgres">
-              <p>Postgres</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/cap.png" alt="Capcut">
-              <p>Capcut</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/mongo.png" alt="MongoDB">
-              <p>MongoDB</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/php.png" alt="PHP">
-              <p>PHP</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/figma.png" alt="Figma">
-              <p>Figma</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/post.png" alt="Postman">
-              <p>Postman</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/pr.png" alt="Premier Pro">
-              <p>Premier Pro</p>
-            </div>
-            <div class="skill-carousel-item">
-              <img src="img/logo/html.png" alt="HTML">
-              <p>HTML</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Enhanced Skills Flip Cards Section -->
-<!-- Enhanced Skills Flip Cards Section -->
-<section class="skills-flip-section">
-  <div class="container">
-    <h2 class="skills-flip-title">Core Competencies</h2>
-    <div class="skills-flip-grid">
-      <!-- AI/ML Cards -->
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-brain"></i>
-            </div>
-            <h3>Machine Learning</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> TensorFlow</li>
-                <li><i class="fas fa-check-circle"></i> PyTorch</li>
-                <li><i class="fas fa-check-circle"></i> Scikit-learn</li>
-                <li><i class="fas fa-check-circle"></i> Model Training</li>
-                <li><i class="fas fa-check-circle"></i> Feature Engineering</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-network-wired"></i>
-            </div>
-            <h3>Deep Learning</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #38ef7d 0%, #11998e 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> Neural Networks</li>
-                <li><i class="fas fa-check-circle"></i> CNNs</li>
-                <li><i class="fas fa-check-circle"></i> RNNs/LSTMs</li>
-                <li><i class="fas fa-check-circle"></i> Transfer Learning</li>
-                <li><i class="fas fa-check-circle"></i> GANs</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #f12711 0%, #f5af19 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <h3>LLM & NLP</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> Transformer Models</li>
-                <li><i class="fas fa-check-circle"></i> GPT/BERT</li>
-                <li><i class="fas fa-check-circle"></i> Text Generation</li>
-                <li><i class="fas fa-check-circle"></i> Sentiment Analysis</li>
-                <li><i class="fas fa-check-circle"></i> HuggingFace</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #0575e6 0%, #021b79 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-eye"></i>
-            </div>
-            <h3>Computer Vision</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #021b79 0%, #0575e6 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> OpenCV</li>
-                <li><i class="fas fa-check-circle"></i> YOLO/SSD</li>
-                <li><i class="fas fa-check-circle"></i> Image Classification</li>
-                <li><i class="fas fa-check-circle"></i> Object Detection</li>
-                <li><i class="fas fa-check-circle"></i> Face Recognition</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #8e0e00 0%, #1f1c18 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-language"></i>
-            </div>
-            <h3>Data Science</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #1f1c18 0%, #8e0e00 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> Pandas/Numpy</li>
-                <li><i class="fas fa-check-circle"></i> Data Visualization</li>
-                <li><i class="fas fa-check-circle"></i> Statistical Analysis</li>
-                <li><i class="fas fa-check-circle"></i> Feature Engineering</li>
-                <li><i class="fas fa-check-circle"></i> Data Cleaning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Frameworks -->
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
-            <div class="skill-icon">
-              <i class="fab fa-python"></i>
-            </div>
-            <h3>Django</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #2c5364 0%, #203a43 50%, #0f2027 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> REST APIs</li>
-                <li><i class="fas fa-check-circle"></i> ORM</li>
-                <li><i class="fas fa-check-circle"></i> Authentication</li>
-                <li><i class="fas fa-check-circle"></i> MVC Architecture</li>
-                <li><i class="fas fa-check-circle"></i> Database Models</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-flask"></i>
-            </div>
-            <h3>Flask</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> Microservices</li>
-                <li><i class="fas fa-check-circle"></i> RESTful APIs</li>
-                <li><i class="fas fa-check-circle"></i> Lightweight</li>
-                <li><i class="fas fa-check-circle"></i> Jinja Templating</li>
-                <li><i class="fas fa-check-circle"></i> Blueprints</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #654ea3 0%, #eaafc8 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <h3>FastAPI</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #eaafc8 0%, #654ea3 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> Async Support</li>
-                <li><i class="fas fa-check-circle"></i> High Performance</li>
-                <li><i class="fas fa-check-circle"></i> Type Hints</li>
-                <li><i class="fas fa-check-circle"></i> OpenAPI/Swagger</li>
-                <li><i class="fas fa-check-circle"></i> Pydantic Models</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-flip-card">
-        <div class="skill-flip-inner">
-          <div class="skill-flip-front" style="background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);">
-            <div class="skill-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3>UI/UX</h3>
-          </div>
-          <div class="skill-flip-back" style="background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);">
-            <div class="skill-details">
-              <ul class="skill-list">
-                <li><i class="fas fa-check-circle"></i> HTML5/CSS3</li>
-                <li><i class="fas fa-check-circle"></i> JavaScript</li>
-                <li><i class="fas fa-check-circle"></i> React.js</li>
-                <li><i class="fas fa-check-circle"></i> Bootstrap</li>
-                <li><i class="fas fa-check-circle"></i> Responsive Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      
-      <section id="publications" class="publications-section">
-        <h2 class="skills-flip-title">Research Papers</h2>
-        <div class="publications-container">
-          <div class="publication">
-            <div class="publication-header">
-              <a href="https://github.com/Aleena24/srgan_cloud/blob/main/GANs%26Clouds.ipynb"><h3>Using Generative Adversarial Networks for Cloud
-                Removal in Satellite Imagery</h3></a>
-            </div>
-            <p align="justify" class="publication-description">Satellite imaging for applications like agriculture, urban planning, and environmental monitoring is often hindered by cloud cover; this article presents a novel GAN-based method for cloud removal, utilizing a ResNet discriminator, UNet generator, and Perlin noise for training, achieving improved performance verified through PSNR scores using EuroSat data.</p>
-            <div class="publication-buttons">
-              <a href="./srgan_cloud.pdf" target="_blank" class="btn-view">View Paper</a>
-              <a href="./srgan_cloud.pdf" download class="btn-download">Download</a>
-            </div>
-          </div>
-          <div class="publication">
-            <div class="publication-header">
-              <a href="https://github.com/Aleena24/real-image-SRGAN/blob/main/research_srgan.ipynb"><h3>Real Image Super resolution using Generative Adversial Network</h3></a>
-            </div>
-            <p align="justify" class="publication-description">SRGAN is a novel GAN-based approach that generates high-quality, realistic images from low-resolution inputs by learning real-world degradation patterns. It outperforms existing methods in terms of visual quality and quantitative metrics, making it a valuable tool for various applications, including medical imaging and remote sensing.</p>
-            <div class="publication-buttons">
-              <a href="./real.pdf" target="_blank" class="btn-view">View Paper</a>
-              <a href="./real.pdf" download class="btn-download">Download</a>
-            </div>
-          </div>
-          <div class="publication">
-            <div class="publication-header">
-              <h3>Virtual Reality for  
-                Interior Design  
-                Presentation </h3>
-            </div>
-            <p align="justify" class="publication-description">Interior Design Presentation in Virtual Reality is a platform where interior designers can develop and share VR presentations of their work, offering benefits like time and cost savings by eliminating physical models, gaining early client feedback to avoid costly changes, and allowing clients to visualize designs in their own spaces, make informed decisions, and engage more actively in the design process.</p>
-            <div class="publication-buttons">
-              <a href="./vr.pdf" target="_blank" class="btn-view">View Paper</a>
-              <a href="./vr.pdf" download class="btn-download">Download</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-      <section id="achievements" class="achievements-section">
-        <h2 class="section-title">Achievements</h2>
-        <div class="achievements-timeline">
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>AIML Engineer</h3>
-              <p>January 2024 - present</p>
-              <p>Currently working as an AIML engineer at SenseSys Pvt. Ltd and leading a cloud hosting project along with AI integration.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>ZeroCodeML V1.0 Lead</h3>
-              <p>November 2024 - March 2025</p>
-              <p>Lead a team for launching a website ZeroCodeML V1.0 which can analyze the data csv files and give insights.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Media Team Head</h3>
-              <p>September 2024 - November 2024</p>
-              <p>Successfully lead the media team for the National IT Fest 'Gateways 2024' Christ University.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Media Team Member</h3>
-              <p>October 2023 - present</p>
-              <p>Media team Member for various events namely Jaago, Saturday Gatherings, Campus Habba, Gateways, Revelations.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>GDSC Infographics Core Lead</h3>
-              <p>August 2023 - April 2024</p>
-              <p>Google Developer Students Club Infographics Core Lead at Christ University.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Student Coordinator</h3>
-              <p>October 2022 - February 2023</p>
-              <p>Lead the team as Student Coordinator for the National IT Fest TechArena'23 at Christ College.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Awarded as Outstanding Student</h3>
-              <p>July 2022 - April 2023</p>
-              <p>Awarded as Outstanding Student in Department of Computer Science at Christ College.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Digitizer Club President</h3>
-              <p>August 2022 - April 2023</p>
-              <p>Lead the Digitizer Club as President at Christ College.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    <!-- Counter Section Begin -->
-    <section class="counter">
-        <div class="container">
-            <div class="counter__content">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item">
-                            <div class="counter__item__text">
-                                <img src="img/icons/ci-1.png" alt="">
-                                <h2 class="counter_num">08</h2>
-                                <p>Completed Projects</p>
+                    <div class="row">
+                        <div class="right-panel">
+                            <nav>
+                                <a href="index.html">Home</a>
+                                <a href="about.html">About Me</a>
+                                <a href="passion.html">Passion</a>
+                                <a href="contact.html">Contact</a>
+                                <a href="project.html">Project</a>
+                            </nav>
+                            <div class="social-vertical">
+                                <span class="rotate"><b>Let's Connect</b></span>
+                                <span class="rotate"><b> ------></b></span>
+                                <div class="icons">
+                                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-medium"></i></a>
+                                    <a href="https://github.com/yourhandle" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a> 
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item second__item">
-                            <div class="counter__item__text">
-                                <img src="img/icons/ci-4.png" alt="">
-                                <h2 class="counter_num">350</h2>
-                                <p>Posters</p>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Enhanced About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <!-- Image Gallery -->
+                    <div class="about-gallery">
+                        <div class="main-image">
+                            <img src="img/about/about-4.png" alt="Aleena working on AI project" class="img-fluid">
+                            <div class="image-overlay">
+                                <span>AI Enthusiast</span>
+                            </div>
+                        </div>
+                        <div class="secondary-images">
+                            <div class="small-image">
+                                <img src="img/about/about-2.jpg" alt="Aleena coding" class="img-fluid">
+                                <div class="image-overlay">
+                                    <span>Designer</span>
+                                </div>
+                            </div>
+                            <div class="small-image">
+                                <img src="img/about/about-3.jpg" alt="Aleena designing" class="img-fluid">
+                                <div class="image-overlay">
+                                    <span>Editor</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item third__item">
-                            <div class="counter__item__text">
-                                <img src="img/icons/ci-3.png" alt="">
-                                <h2 class="counter_num">50</h2>
-                                <p>Edited Videos</p>
+
+                    <!-- About Text -->
+                    <div class="about-text">
+                        <div class="section-header">
+                            <h2>My Expertise</h2>
+                            <div class="divider"></div>
+                            <p class="subtitle">Bridging AI innovation with creative expression</p>
+                        </div>
+
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="skill-content">
+                                    <h3>AI & Machine Learning</h3>
+                                    <p>Developing intelligent systems using cutting-edge ML algorithms, neural networks, and deep learning frameworks to solve real-world problems.</p>
+                                    <ul class="skill-tags">
+                                        <li>TensorFlow</li>
+                                        <li>PyTorch</li>
+                                        <li>Computer Vision</li>
+                                        <li>NLP</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="skill-content">
+                                    <h3>Creative Design</h3>
+                                    <p>Crafting compelling visual narratives through graphic design and video editing to communicate complex ideas effectively.</p>
+                                    <ul class="skill-tags">
+                                        <li>Adobe Premiere</li>
+                                        <li>DaVinci Resolve</li>
+                                        <li>Canva</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-description">
+                            <p>As a <b>MSc Artificial Intelligence and Machine Learning</b> student from <b>CHRIST (Deemed to be University)</b>, I combine technical expertise in machine learning with creative problem-solving skills. My projects demonstrate proficiency in:</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> Building end-to-end AI solutions from data collection to deployment</li>
+                                <li><i class="fas fa-check-circle"></i> Developing interactive web applications with Streamlit and FasAPI</li>
+                                <li><i class="fas fa-check-circle"></i> Creating data visualizations that tell compelling stories</li>
+                                <li><i class="fas fa-check-circle"></i> Designing user-friendly interfaces for technical systems</li>
+                            </ul>
+                            <p>When I'm not training models, you'll find me editing videos or designing posters that blend aesthetic appeal with technical accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+        <section id="education" class="education-section">
+            <div class="section-title-education">
+                <h2>Education</h2>
+            </div>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h3>MSc in Artificial Intelligence and Machine Learning</h3>
+                    <span>CHRIST (Deemed to be University), Bangalore, Karnataka</span>
+                    <p><span>2023 - Present</span></p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor's of Computer Applications</h3>
+                    <span>Christ College, Rajkot, Gujarat</span>
+                    <p><span>2020 - 2023</span></p>
+                </div>
+                <div class="education-item">
+                    <h3>Higher Secondary</h3>
+                    <span>Nirmala Convent School, Rajkot, Gujarat</span>
+                    <p><span>2018 - 2020</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="internships" class="internships-section">
+            <div class="section-title-internships">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="internships-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>AIML Engineer</h3>
+                            <img src="img/logo/logo-8.jpg" alt="Pysqli Logo">
+                            <h3>SenseSys Pvt. Ltd</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://nextuempower.com/"><h3>AIML Engineer</h3></a>
+                            <p>Duration: January 2025 - present</p>
+                            <p>As an AIML Engineer at SenseSys, I work on developing intelligent data visualization tools, automating cloud-based workflows, and building AI-powered systems for content generation and social media management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Graphic Designer</h3>
+                            <img src="img/logo/nextu.jpeg" alt="Pysqli Logo">
+                            <h3>NextU Empower</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://nextuempower.com/"><h3>Graphic Designer</h3></a>
+                            <p>Duration: September 2024 - December 2024</p>
+                            <p>Designing visually engaging graphics and creating promotional videos for web and social media, focusing on enhancing brand identity and user engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>ML Engineer Intern</h3>
+                            <img src="img/logo/prodigy.jpeg" alt="Company 2 Logo">
+                            <h3>Prodigy Infotech</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://prodigyinfotech.dev/"><h3>Machine Learning Engineer Intern</h3></a>
+                            <p>Duration: April 2024 - May 2024</p>
+                            <p>Prodigy InfoTech | intern</p>
+                            <p>Acquired hands-on experience in designing, training, and evaluating machine learning models to generate actionable insights.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Python Developer Intern</h3>
+                            <img src="img/logo/psyliq.png" alt="Pysqli Logo">
+                            <h3>Psyliq</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="https://psyliq.com/"><h3>Python Developer Intern</h3></a>
+                            <p>Duration: May 2024 - June 2024</p>
+                            <p>Psyliq | intern</p>
+                            <p>Developed expertise in gathering, analyzing, and visualizing data using Python, extracting valuable insights to drive data-centric initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Carousel Section -->
+        <section class="skills-carousel-section">
+            <h2 class="skills-carousel-title">Technical Skills</h2>
+            <div class="skills-carousel-container">
+                <div class="skills-carousel-track">
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/py.png" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/canva.png" alt="Canva">
+                        <p>Canva</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/da.png" alt="Da Vinci">
+                        <p>Da Vinci</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/css.png" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/docker.png" alt="Docker">
+                        <p>Docker</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/react.jpg" alt="React">
+                        <p>React</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/js.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/aws.png" alt="AWS">
+                        <p>AWS</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/bs.png" alt="Bootstrap">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/stream.png" alt="Streamlit">
+                        <p>Streamlit</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/sql.png" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/postgres.png" alt="Postgres">
+                        <p>Postgres</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/cap.png" alt="Capcut">
+                        <p>Capcut</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/mongo.png" alt="MongoDB">
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/php.png" alt="PHP">
+                        <p>PHP</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/figma.png" alt="Figma">
+                        <p>Figma</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/post.png" alt="Postman">
+                        <p>Postman</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/pr.png" alt="Premier Pro">
+                        <p>Premier Pro</p>
+                    </div>
+                    <div class="skill-carousel-item">
+                        <img src="img/logo/html.png" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced Skills Flip Cards Section -->
+        <section class="skills-flip-section">
+            <div class="container">
+                <h2 class="skills-flip-title">Core Competencies</h2>
+                <div class="skills-flip-grid">
+                    <!-- AI/ML Cards -->
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>Machine Learning</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> TensorFlow</li>
+                                        <li><i class="fas fa-check-circle"></i> PyTorch</li>
+                                        <li><i class="fas fa-check-circle"></i> Scikit-learn</li>
+                                        <li><i class="fas fa-check-circle"></i> Model Training</li>
+                                        <li><i class="fas fa-check-circle"></i> Feature Engineering</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item four__item">
-                            <div class="counter__item__text">
-                                <img src="img/icons/ci-2.png" alt="">
-                                <h2 class="counter_num">90</h2>
-                                <p>Happy Faces</p>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h3>Deep Learning</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #38ef7d 0%, #11998e 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> Neural Networks</li>
+                                        <li><i class="fas fa-check-circle"></i> CNNs</li>
+                                        <li><i class="fas fa-check-circle"></i> RNNs/LSTMs</li>
+                                        <li><i class="fas fa-check-circle"></i> Transfer Learning</li>
+                                        <li><i class="fas fa-check-circle"></i> GANs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #f12711 0%, #f5af19 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3>LLM & NLP</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> Transformer Models</li>
+                                        <li><i class="fas fa-check-circle"></i> GPT/BERT</li>
+                                        <li><i class="fas fa-check-circle"></i> Text Generation</li>
+                                        <li><i class="fas fa-check-circle"></i> Sentiment Analysis</li>
+                                        <li><i class="fas fa-check-circle"></i> HuggingFace</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #0575e6 0%, #021b79 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3>Computer Vision</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #021b79 0%, #0575e6 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> OpenCV</li>
+                                        <li><i class="fas fa-check-circle"></i> YOLO/SSD</li>
+                                        <li><i class="fas fa-check-circle"></i> Image Classification</li>
+                                        <li><i class="fas fa-check-circle"></i> Object Detection</li>
+                                        <li><i class="fas fa-check-circle"></i> Face Recognition</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #8e0e00 0%, #1f1c18 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <h3>Data Science</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #1f1c18 0%, #8e0e00 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> Pandas/Numpy</li>
+                                        <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+                                        <li><i class="fas fa-check-circle"></i> Statistical Analysis</li>
+                                        <li><i class="fas fa-check-circle"></i> Feature Engineering</li>
+                                        <li><i class="fas fa-check-circle"></i> Data Cleaning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h3>Django</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #2c5364 0%, #203a43 50%, #0f2027 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> REST APIs</li>
+                                        <li><i class="fas fa-check-circle"></i> ORM</li>
+                                        <li><i class="fas fa-check-circle"></i> Authentication</li>
+                                        <li><i class="fas fa-check-circle"></i> MVC Architecture</li>
+                                        <li><i class="fas fa-check-circle"></i> Database Models</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h3>Flask</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> Microservices</li>
+                                        <li><i class="fas fa-check-circle"></i> RESTful APIs</li>
+                                        <li><i class="fas fa-check-circle"></i> Lightweight</li>
+                                        <li><i class="fas fa-check-circle"></i> Jinja Templating</li>
+                                        <li><i class="fas fa-check-circle"></i> Blueprints</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #654ea3 0%, #eaafc8 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3>FastAPI</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #eaafc8 0%, #654ea3 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> Async Support</li>
+                                        <li><i class="fas fa-check-circle"></i> High Performance</li>
+                                        <li><i class="fas fa-check-circle"></i> Type Hints</li>
+                                        <li><i class="fas fa-check-circle"></i> OpenAPI/Swagger</li>
+                                        <li><i class="fas fa-check-circle"></i> Pydantic Models</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-flip-card">
+                        <div class="skill-flip-inner">
+                            <div class="skill-flip-front" style="background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>UI/UX</h3>
+                            </div>
+                            <div class="skill-flip-back" style="background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);">
+                                <div class="skill-details">
+                                    <ul class="skill-list">
+                                        <li><i class="fas fa-check-circle"></i> HTML5/CSS3</li>
+                                        <li><i class="fas fa-check-circle"></i> JavaScript</li>
+                                        <li><i class="fas fa-check-circle"></i> React.js</li>
+                                        <li><i class="fas fa-check-circle"></i> Bootstrap</li>
+                                        <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Counter Section End -->      
-    
-    <!-- Footer Section Begin -->
-    <footer class="footer">
-            
+        </section>
+        
+        <section id="publications" class="publications-section">
+            <h2 class="skills-flip-title">Research Papers</h2>
+            <div class="publications-container">
+                <div class="publication">
+                    <div class="publication-header">
+                        <a href="https://github.com/Aleena24/srgan_cloud/blob/main/GANs%26Clouds.ipynb"><h3>Using Generative Adversarial Networks for Cloud
+                            Removal in Satellite Imagery</h3></a>
+                    </div>
+                    <p align="justify" class="publication-description">Satellite imaging for applications like agriculture, urban planning, and environmental monitoring is often hindered by cloud cover; this article presents a novel GAN-based method for cloud removal, utilizing a ResNet discriminator, UNet generator, and Perlin noise for training, achieving improved performance verified through PSNR scores using EuroSat data.</p>
+                    <div class="publication-buttons">
+                        <a href="./srgan_cloud.pdf" target="_blank" class="btn-view">View Paper</a>
+                        <a href="./srgan_cloud.pdf" download class="btn-download">Download</a>
+                    </div>
+                </div>
+                <div class="publication">
+                    <div class="publication-header">
+                        <a href="https://github.com/Aleena24/real-image-SRGAN/blob/main/research_srgan.ipynb"><h3>Real Image Super resolution using Generative Adversial Network</h3></a>
+                    </div>
+                    <p align="justify" class="publication-description">SRGAN is a novel GAN-based approach that generates high-quality, realistic images from low-resolution inputs by learning real-world degradation patterns. It outperforms existing methods in terms of visual quality and quantitative metrics, making it a valuable tool for various applications, including medical imaging and remote sensing.</p>
+                    <div class="publication-buttons">
+                        <a href="./real.pdf" target="_blank" class="btn-view">View Paper</a>
+                        <a href="./real.pdf" download class="btn-download">Download</a>
+                    </div>
+                </div>
+                <div class="publication">
+                    <div class="publication-header">
+                        <h3>Virtual Reality for  
+                            Interior Design  
+                            Presentation </h3>
+                    </div>
+                    <p align="justify" class="publication-description">Interior Design Presentation in Virtual Reality is a platform where interior designers can develop and share VR presentations of their work, offering benefits like time and cost savings by eliminating physical models, gaining early client feedback to avoid costly changes, and allowing clients to visualize designs in their own spaces, make informed decisions, and engage more actively in the design process.</p>
+                    <div class="publication-buttons">
+                        <a href="./vr.pdf" target="_blank" class="btn-view">View Paper</a>
+                        <a href="./vr.pdf" download class="btn-download">Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="achievements" class="achievements-section">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>AIML Engineer</h3>
+                        <p>January 2024 - present</p>
+                        <p>Currently working as an AIML engineer at SenseSys Pvt. Ltd and leading a cloud hosting project along with AI integration.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>ZeroCodeML V1.0 Lead</h3>
+                        <p>November 2024 - March 2025</p>
+                        <p>Lead a team for launching a website ZeroCodeML V1.0 which can analyze the data csv files and give insights.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Media Team Head</h3>
+                        <p>September 2024 - November 2024</p>
+                        <p>Successfully lead the media team for the National IT Fest 'Gateways 2024' Christ University.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Media Team Member</h3>
+                        <p>October 2023 - present</p>
+                        <p>Media team Member for various events namely Jaago, Saturday Gatherings, Campus Habba, Gateways, Revelations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>GDSC Infographics Core Lead</h3>
+                        <p>August 2023 - April 2024</p>
+                        <p>Google Developer Students Club Infographics Core Lead at Christ University.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Student Coordinator</h3>
+                        <p>October 2022 - February 2023</p>
+                        <p>Lead the team as Student Coordinator for the National IT Fest TechArena'23 at Christ College.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Awarded as Outstanding Student</h3>
+                        <p>July 2022 - April 2023</p>
+                        <p>Awarded as Outstanding Student in Department of Computer Science at Christ College.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Digitizer Club President</h3>
+                        <p>August 2022 - April 2023</p>
+                        <p>Lead the Digitizer Club as President at Christ College.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Counter Section Begin -->
+        <section class="counter">
+            <div class="container">
+                <div class="counter__content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter__item">
+                                <div class="counter__item__text">
+                                    <img src="img/icons/ci-1.png" alt="">
+                                    <h2 class="counter_num">08</h2>
+                                    <p>Completed Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter__item second__item">
+                                <div class="counter__item__text">
+                                    <img src="img/icons/ci-4.png" alt="">
+                                    <h2 class="counter_num">350</h2>
+                                    <p>Posters</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter__item third__item">
+                                <div class="counter__item__text">
+                                    <img src="img/icons/ci-3.png" alt="">
+                                    <h2 class="counter_num">50</h2>
+                                    <p>Edited Videos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="counter__item four__item">
+                                <div class="counter__item__text">
+                                    <img src="img/icons/ci-2.png" alt="">
+                                    <h2 class="counter_num">90</h2>
+                                    <p>Happy Faces</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Counter Section End -->      
+        
+        <!-- Footer Section Begin -->
+        <footer class="footer">
             <div class="footer__copyright">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-
                         <p class="footer__copyright__text">Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
@@ -710,9 +759,9 @@
                     </div>
                 </div>
             </div>
-       
-    </footer>
-    <!-- Footer Section End -->
+        </footer>
+        <!-- Footer Section End -->
+    </div>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -722,6 +771,107 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
-</body>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size to full window
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            // Initial resize
+            resizeCanvas();
+            
+            // Create particles
+            const particles = [];
+            const particleCount = Math.floor(window.innerWidth / 10);
+            
+            // Particle constructor
+            function Particle() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 2 - 1;
+                this.speedY = Math.random() * 2 - 1;
+                this.color = `hsl(${Math.random() * 60 + 190}, 70%, 60%)`;
+            
+                this.update = function() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    
+                    // Bounce off edges
+                    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+                };
+            
+                this.draw = function() {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                };
+            }
+            
+            // Initialize particles
+            function initParticles() {
+                particles.length = 0; // Clear existing particles
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+            
+            // Initial particle creation
+            initParticles();
+            
+            // Animation loop
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Update and draw particles
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                
+                // Connect nearby particles
+                connectParticles();
+                
+                requestAnimationFrame(animate);
+            }
+            
+            // Draw lines between close particles
+            function connectParticles() {
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a; b < particles.length; b++) {
+                        const dx = particles[a].x - particles[b].x;
+                        const dy = particles[a].y - particles[b].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 100) {
+                            ctx.strokeStyle = `rgba(100, 150, 255, ${1 - distance/100})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                resizeCanvas();
+                initParticles();
+            });
+            
+            // Start animation
+            animate();
+        });
+    </script>
+</body>
 </html>
