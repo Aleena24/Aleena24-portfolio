@@ -24,274 +24,224 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="passion.css" type="text/css">
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
+    <!-- Interactive Background -->
+    <div class="interactive-bg">
+        <div id="particle-canvas"></div>
+        <div class="color-overlay"></div>
     </div>
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-
-                    </div>
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="./index.html"><img src="./img/logo/logo.jpg" alt=""></a>
                 </div>
-                <div class="col-lg-10">
-                    <div class="header__nav__option">
-                        <nav class="header__nav__menu mobile-menu">
-                            <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="./project.html">Project</a></li>
-                                <li class="active"><a href="./passion.html">Passion</a></li>    
-                                <li><a href="./contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__nav__social">
-                            <a href="https://www.linkedin.com/in/aleena-varghese-atv024/"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://github.com/Aleena24"><i class="fa fa-github"></i></a>
-                            <a href="https://medium.com/@alinavarghese009"><i class="fa fa-medium"></i></a>
-                        </div>
-                    </div>
-                </div>
+                <nav>
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About Me</a>
+                    <a href="./passion.html" class="active">Passion</a>
+                    <a href="./project.html">Project</a>
+                    <a href="./contact.html">Contact</a>
+                </nav>
             </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
+        </header>
     <!-- Header End -->
 
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>My Passion</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>Passion</span><br>
-                            <span>Few Selected Works</span></br>
-                        </div>
-                    </div>
-                </div>
+    <!-- Passion Section Begin -->
+    <section class="passion-section">
+        <div class="section-header">
+            <h2>My Passion</h2>
+            <div class="subtitle">
+                <a href="./index.html">Home</a> / Passion<br>
+                Few Selected Works
             </div>
         </div>
-    </div>
     <!-- Breadcrumb End -->
 
     <!-- Portfolio Section Begin -->
-    <section class="portfolio spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="portfolio__filter">
-                        <li class="active" data-filter="*">All</li>
-                        <li data-filter=".video">Videos</li>
-                        <li data-filter=".poster">Posters</li>
-                        <li data-filter=".bro">Brochures</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio__gallery">
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/passion/video/elpida.png">
-                            <a href="https://www.youtube.com/watch?v=bsafKoS31NE" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>Elpida | CornerStone</h4>
-                            <span>Video</span>
-                        </div>
+    <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="*">All</button>
+            <button class="filter-btn" data-filter=".video">Videos</button>
+            <button class="filter-btn" data-filter=".poster">Posters</button>
+            <button class="filter-btn" data-filter=".bro">Brochures</button>
+        </div>
+        <div class="portfolio-grid">
+                <div class="portfolio-item mix video">
+                    <div class="portfolio-content">
+                        <img src="img/passion/video/elpida.png" alt="Elpida | CornerStone">
+                        <a href="https://www.youtube.com/watch?v=bsafKoS31NE" class="play-btn video-popup">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Elpida | CornerStone</h3>
+                        <p>Video</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/passion/video/reve.png">
-                            <a href="https://www.youtube.com/watch?v=0G3DMui8iBk" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>Revelations | Event</h4>
-                            <span>Video</span>
-                        </div>
+                <div class="portfolio-item mix video">
+                    <div class="portfolio-content">
+                        <img src="img/passion/video/reve.png" alt="Revelations | Event">
+                        <a href="https://www.youtube.com/watch?v=0G3DMui8iBk" class="play-btn video-popup">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Revelations | Event</h3>
+                        <p>Video</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/passion/video/AV.png">
-                            <a href="https://www.youtube.com/watch?v=5U-hakZdkD0" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>Aleena Varghese</h4>
-                            <span>Video</span>
-                        </div>
+                <div class="portfolio-item mix video">
+                    <div class="portfolio-content">
+                        <img src="img/passion/video/AV.png" alt="Aleena Varghese">
+                        <a href="https://www.youtube.com/watch?v=5U-hakZdkD0" class="play-btn video-popup">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Aleena Varghese</h3>
+                        <p>Video</p>
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video" style="position: relative; width: 100%; padding-top: 177.78%;">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GHO-B2t6QbI" 
-                                title="YouTube video player" frameborder="0" 
+                <div class="portfolio-item mix video">
+                    <div class="portfolio-content">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/GHO-B2t6QbI" 
+                                title="Mukti Sadan" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
+                                allowfullscreen></iframe>
                         </div>
-                        <div class="portfolio__item__text">
-                            <h4>Mukti Sadan</h4>
-                            <span>Video</span>
-                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Mukti Sadan</h3>
+                        <p>Video</p>
                     </div>
                 </div>
                 
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video" style="position: relative; width: 100%; padding-top: 177.78%;">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tAXEJU81CUI" 
-                                title="YouTube video player" frameborder="0" 
+                <div class="portfolio-item mix video">
+                    <div class="portfolio-content">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/tAXEJU81CUI" 
+                                title="Gateways | Stay Tuned" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
+                                allowfullscreen></iframe>
                         </div>
-                        <div class="portfolio__item__text">
-                            <h4>Gateways | Stay Tuned</h4>
-                            <span>Video</span>
-                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Gateways | Stay Tuned</h3>
+                        <p>Video</p>
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video" style="position: relative; width: 100%; padding-top: 177.78%;">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/j5ULANL2AYo" 
-                                title="YouTube video player" frameborder="0" 
+                <div class="portfolio-item mix video">
+                    <div class="portfolio-content">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/j5ULANL2AYo" 
+                                title="International Day" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
+                                allowfullscreen></iframe>
                         </div>
-                        <div class="portfolio__item__text">
-                            <h4>International Day</h4>
-                            <span>Video</span>
-                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>International Day</h3>
+                        <p>Video</p>
                     </div>
                 </div>
                             
                 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix poster">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__image set-bg" data-setbg="./img/passion/poster/powerBI.png"> 
-                            <a href="./img/passion/poster/powerBI.png" class="image-popup">
-                                <img src="./img/passion/poster/powerBI.png" alt="mysticML" /> 
-                            </a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>PowerBI</h4>
-                            <span>Poster</span>
-                        </div>
+                <div class="portfolio-item mix poster">
+                    <div class="portfolio-content">
+                        <img src="./img/passion/poster/powerBI.png" alt="PowerBI">
+                        <a href="./img/passion/poster/powerBI.png" class="image-popup"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>PowerBI</h3>
+                        <p>Poster</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix poster">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__image set-bg" data-setbg="./img/passion/poster/mysticML.png"> 
-                            <a href="./img/passion/poster/mysticML.png" class="image-popup">
-                                <img src="./img/passion/poster/mysticML.png" alt="mysticML" /> 
-                            </a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>mysticML</h4>
-                            <span>Poster</span>
-                        </div>
+                <div class="portfolio-item mix poster">
+                    <div class="portfolio-content">
+                        <img src="./img/passion/poster/mysticML.png" alt="mysticML">
+                        <a href="./img/passion/poster/mysticML.png" class="image-popup"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>mysticML</h3>
+                        <p>Poster</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix poster">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__image set-bg" data-setbg="./img/passion/poster/30days.png"> 
-                            <a href="./img/passion/poster/30days.png" class="image-popup">
-                                <img src="./img/passion/poster/30days.png" alt="mysticML" /> 
-                            </a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>30 days</h4>
-                            <span>Poster</span>
-                        </div>
+                <div class="portfolio-item mix poster">
+                    <div class="portfolio-content">
+                        <img src="./img/passion/poster/30days.png" alt="30 days">
+                        <a href="./img/passion/poster/30days.png" class="image-popup"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>30 days</h3>
+                        <p>Poster</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix poster">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__image set-bg" data-setbg="./img/passion/poster/gathering.png"> 
-                            <a href="./img/passion/poster/gathering.png" class="image-popup">
-                                <img src="./img/passion/poster/gathering.png" alt="mysticML" /> 
-                            </a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>Saturday Gathering</h4>
-                            <span>Poster</span>
-                        </div>
+                <div class="portfolio-item mix poster">
+                    <div class="portfolio-content">
+                        <img src="./img/passion/poster/gathering.png" alt="Saturday Gathering">
+                        <a href="./img/passion/poster/gathering.png" class="image-popup"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Saturday Gathering</h3>
+                        <p>Poster</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix poster">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__image set-bg" data-setbg="./img/passion/poster/media_online.png"> 
-                            <a href="./img/passion/poster/media_online.png" class="image-popup">
-                                <img src="./img/passion/poster/media_online.png" alt="mysticML" /> 
-                            </a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>Media Workshop</h4>
-                            <span>Poster</span>
-                        </div>
+                <div class="portfolio-item mix poster">
+                    <div class="portfolio-content">
+                        <img src="./img/passion/poster/media_online.png" alt="Media Workshop">
+                        <a href="./img/passion/poster/media_online.png" class="image-popup"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Media Workshop</h3>
+                        <p>Poster</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-6 mix poster">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__image set-bg" data-setbg="./img/passion/poster/poster_video.png"> 
-                            <a href="./img/passion/poster/poster_video.png" class="image-popup">
-                                <img src="./img/passion/poster/poster_video.png" alt="mysticML" /> 
-                            </a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>Video Poster</h4>
-                            <span>Poster</span>
-                        </div>
+                <div class="portfolio-item mix poster">
+                    <div class="portfolio-content">
+                        <img src="./img/passion/poster/poster_video.png" alt="Video Poster">
+                        <a href="./img/passion/poster/poster_video.png" class="image-popup"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Video Poster</h3>
+                        <p>Poster</p>
                     </div>
                 </div>
 
  <!-- Brochures Section Begin -->
-<div class="col-lg-4 col-md-6 col-sm-6 mix bro">
-    <div class="portfolio__item">
-        <div class="portfolio__item__brochure">
-            <img src="img/passion/bro/rd.png" alt="Brochure 1" class="brochure-thumbnail" data-toggle="modal" data-target="#brochure1Modal">
-        </div>
-        <div class="portfolio__item__text">
-            <h4>R&D Block | Brochure</h4>
-            <span>Interactive Flipbook</span>
-        </div>
+<div class="portfolio-item mix bro">
+    <div class="portfolio-content">
+        <img src="img/passion/bro/rd.png" alt="R&D Block | Brochure" data-toggle="modal" data-target="#brochure1Modal">
+    </div>
+    <div class="portfolio-info">
+        <h3>R&D Block | Brochure</h3>
+        <p>Interactive Flipbook</p>
     </div>
 </div>
 
-<div class="col-lg-4 col-md-6 col-sm-6 mix bro">
-    <div class="portfolio__item">
-        <div class="portfolio__item__brochure">
-            <img src="img/passion/bro/news.png" alt="Brochure 2" class="brochure-thumbnail" data-toggle="modal" data-target="#brochure2Modal">
-        </div>
-        <div class="portfolio__item__text">
-            <h4>Techbytes | Newsletter</h4>
-            <span>Interactive Flipbook</span>
-        </div>
+<div class="portfolio-item mix bro">
+    <div class="portfolio-content">
+        <img src="img/passion/bro/news.png" alt="Techbytes | Newsletter" data-toggle="modal" data-target="#brochure2Modal">
+    </div>
+    <div class="portfolio-info">
+        <h3>Techbytes | Newsletter</h3>
+        <p>Interactive Flipbook</p>
     </div>
 </div>
 
@@ -331,57 +281,21 @@
     </section>
     <!-- Portfolio Section End -->
 
-<!-- Logo Begin -->
-<div class="logo spad">
-    <div class="container">
-        <div class="logo__carousel owl-carousel">
-            <a href="#" class="logo__item"><img src="img/logo/logo-1.png" alt=""></a>
-            <a href="#" class="logo__item"><img src="img/logo/logo-2.png" alt=""></a>
-            <a href="#" class="logo__item"><img src="img/logo/logo-3.png" alt=""></a>
-            <a href="#" class="logo__item"><img src="img/logo/logo-4.png" alt=""></a>
-            <a href="#" class="logo__item"><img src="img/logo/logo-5.png" alt=""></a>
-            <a href="#" class="logo__item"><img src="img/logo/logo-6.png" alt=""></a>
-            <a href="#" class="logo__item"><img src="img/logo/logo-7.png" alt=""></a>
-        </div>
-    </div>
-</div>
-<!-- Logo End -->
-
 <!-- Footer Section Begin -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer__top">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__top__logo">
-                        <a href="#"><img src="img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__top__social">
-                        <a href="https://www.linkedin.com/in/aleena-varghese-atv024/"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/Aleena24"><i class="fa fa-github"></i></a>
-                        <a href="https://medium.com/@alinavarghese009"><i class="fa fa-medium"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer__copyright">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-
-                    <p class="footer__copyright__text">Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        All rights reserved <i class="fa fa-heart-o"
-                            aria-hidden="true"></i> by <a href="#" target="_blank">Aleena Varghese</a>
-                    </p>
-                </div>
-            </div>
+    <div class="social-vertical">
+        <span class="rotate">Follow Me</span>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/aleena-varghese-atv024/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Aleena24"><i class="fa fa-github"></i></a>
+            <a href="https://medium.com/@alinavarghese009"><i class="fa fa-medium"></i></a>
         </div>
     </div>
+    <p class="footer__copyright__text">
+        Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+        All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by 
+        <a href="#">Aleena Varghese</a>
+    </p>
 </footer>
 <!-- Footer Section End -->
 
