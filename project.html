@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="Aleena Varghese" content="Portfolio">
@@ -8,11 +11,12 @@
 
     <!-- Favicon -->
     <link rel="icon" href="img/logo/AV.ico" type="image/x-icon">
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -20,186 +24,145 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="passion.css" type="text/css">
 </head>
 
 <body>
+    <!-- Particle Background -->
+    <div class="interactive-bg">
+        <canvas id="particle-canvas"></canvas>
+        <div class="color-overlay"></div>
+    </div>
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-
+    <div class="content-wrapper">
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo on the left -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./img/logo/logo.jpg" alt="Aleena Varghese Logo">
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="header__nav__option">
-                        <nav class="header__nav__menu mobile-menu">
-                            <ul>
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li class="active"><a href="./project.html">Project</a></li>
-                                <li><a href="./passion.html">Passion</a></li>    
-                                <li><a href="./contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__nav__social">
-                            <a href="https://www.linkedin.com/in/aleena-varghese-atv024/"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://github.com/Aleena24"><i class="fa fa-github"></i></a>
-                            <a href="https://medium.com/@alinavarghese009"><i class="fa fa-medium"></i></a>
+                    <div class="row">
+                        <div class="right-panel">
+                            <nav>
+                                <a href="index.html">Home</a>
+                                <a href="about.html">About Me</a>
+                                <a href="passion.html">Passion</a>
+                                <a href="project.html" class="active">Project</a>
+                                <a href="contact.html">Contact</a>
+                            </nav>
+                            <div class="social-vertical">
+                                <span class="rotate"><b>Let's Connect</b></span>
+                                <span class="rotate"><b> ------></b></span>
+                                <div class="icons">
+                                    <a href="https://www.linkedin.com/in/aleena-varghese-atv024/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://medium.com/@alinavarghese009" target="_blank"><i class="fab fa-medium"></i></a>
+                                    <a href="https://github.com/Aleena24" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> 
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div id="mobile-menu-wrap"></div>
                 </div>
             </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
-    <!-- Header End -->
+        </header>
+        <!-- Header End -->
 
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>My Projects</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>Projects</span>
-                        </div>
+        <!-- Project Section Begin -->
+        <section class="passion-section">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <div class="subtitle">
+                    <a href="./index.html">Home</a> / Projects<br>
+                    Few Selected Works
+                </div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item mix project">
+                    <div class="portfolio-content">
+                        <img src="img/icons/si-1.png" alt="SpamShield">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Breadcrumb End -->
-
-    <!-- Services Section Begin -->
-    <section class="services-page spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div><h4>
-                        <a href="https://aleena24.github.io/SpamShield/">SpamShield <br>2024</br></a></h4>
+                    <div class="portfolio-info">
+                        <h3><a href="https://aleena24.github.io/SpamShield/">SpamShield 2024</a></h3>
                         <p>Enhance your email management with our cutting-edge Smart Email Classifier.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div>
-                        <h4><a href="https://eduquest-yqcrxybweayjde5syi5jbx.streamlit.app/">EduQuest<br>2024</br></a></h4>
-                        <p>EduQuest is an app that allows students to upload PDFs and can fetch content from the web
-                             to automatically generate multiple-choice, short, and long answer questions.</p>
+                <div class="portfolio-item mix project">
+                    <div class="portfolio-content">
+                        <img src="img/icons/si-1.png" alt="EduQuest">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="https://eduquest-yqcrxybweayjde5syi5jbx.streamlit.app/">EduQuest 2024</a></h3>
+                        <p>EduQuest is an app that allows students to upload PDFs and can fetch content from the web to automatically generate multiple-choice, short, and long answer questions.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div>
-                        <h4><a href="https://github.com/Aleena24/SentimentLens">SentimentLens<br>2023</br></a></h4>
+                <div class="portfolio-item mix project">
+                    <div class="portfolio-content">
+                        <img src="img/icons/si-1.png" alt="SentimentLens">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="https://github.com/Aleena24/SentimentLens">SentimentLens 2023</a></h3>
                         <p>SentimentLens is a Python API that analyzes customer reviews using LLMs and outputs sentiment scores.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div>
-                        <h4><a href="https://github.com/Arjgorithmic/FitTrak">FitTrak<br>2023</br></a></h4>
+                <div class="portfolio-item mix project">
+                    <div class="portfolio-content">
+                        <img src="img/icons/si-1.png" alt="FitTrak">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="https://github.com/Arjgorithmic/FitTrak">FitTrak 2023</a></h3>
                         <p>A fitness routine tracking application, stores exercise metadata and routines for progress tracking.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div>
-                        <h4><a href="https://github.com/Aleena24/College-management-system">CMS<br>2023</br></a></h4>
-                        <p>
-                            The College Management System efficiently manages student attendance, results, and faculty tools
-                             streamline academic and administrative processes.</p>
+                <div class="portfolio-item mix project">
+                    <div class="portfolio-content">
+                        <img src="img/icons/si-1.png" alt="CMS">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="https://github.com/Aleena24/College-management-system">CMS 2023</a></h3>
+                        <p>The College Management System efficiently manages student attendance, results, and faculty tools streamline academic and administrative processes.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="img/icons/si-1.png" alt="">
-                        </div>
-                        <h4><a href="https://github.com/Aleena24/Online_Novel-Store">Lectophile<br>2022</br></a></h4>
-                        <p>Lectophile is an online platform for browsing, searching, and ordering novels, 
-                            offering a user-friendly experience with secure data management and efficient order processing.</p>
+                <div class="portfolio-item mix project">
+                    <div class="portfolio-content">
+                        <img src="img/icons/si-1.png" alt="Lectophile">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="https://github.com/Aleena24/Online_Novel-Store">Lectophile 2022</a></h3>
+                        <p>Lectophile is an online platform for browsing, searching, and ordering novels, offering a user-friendly experience with secure data management and efficient order processing.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
+        </section>
 
-<!-- Footer Section Begin -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer__top">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__top__logo">
-                        <a href="#"><img src="img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__top__social">
-                        <a href="#"><i class="fa fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/aleena-varghese-atv024/"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/Aleena24"><i class="fa fa-github"></i></a>
-                        <a href="https://medium.com/@alinavarghese009"><i class="fa fa-medium"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer__copyright">
-            <div class="row">
-                <div class="col-lg-12 text-center">
+        <!-- Footer Section Begin -->
+        <footer class="footer">
+            <p class="footer__copyright__text">
+                Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+                All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by 
+                <a href="#">Aleena Varghese</a>
+            </p>
+        </footer>
+        <!-- Footer Section End -->
 
-                    <p class="footer__copyright__text">Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        All rights reserved <i class="fa fa-heart-o"
-                            aria-hidden="true"></i> by <a href="#" target="_blank">Aleena Varghese</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+        <!-- Js Plugins -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
     </div>
-</footer>
-<!-- Footer Section End -->
-
-<!-- Js Plugins -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
 </body>
-
 </html>
