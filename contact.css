@@ -97,36 +97,43 @@ nav a.active {
   color: #007BFF;
 }
 
-/* Vertical Social Panel */
+
 .social-vertical {
   position: fixed;
+  right: 1rem;
   top: 50%;
-  right: 10px;
   transform: translateY(-50%);
-  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
 }
 
 .rotate {
   writing-mode: vertical-rl;
   font-size: 0.85rem;
+  margin-bottom: 0.5rem;
   color: #777;
-  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icons a {
+  margin: 0.6rem 0;
   font-size: 1.2rem;
-  color: #333;
-  margin: 6px 0;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #222;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .icons a:hover {
   transform: scale(1.2);
   color: #007BFF;
 }
+
 
 /* Section Header */
 .section-header {
@@ -151,6 +158,7 @@ nav a.active {
   border-radius: 10px;
   padding: 25px;
   margin: 20px;
+  margin-bottom: 50px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -185,7 +193,10 @@ nav a.active {
 .contact__form {
   background: #fff;
   padding: 40px 30px;
+  width: 650px;
+  margin-right: -100px;
   border-radius: 12px;
+  margin-bottom: 50px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
@@ -277,9 +288,7 @@ nav a.active {
     margin-top: 10px;
   }
 
-  .social-vertical {
-    right: 5px;
-  }
+
 
   .contact__form {
     padding: 25px 20px;
