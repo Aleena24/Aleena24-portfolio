@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="passion.css" type="text/css">
+    <link rel="stylesheet" href="project.css" type="text/css">
 </head>
 
 <body>
@@ -165,4 +165,47 @@
         <script src="js/main.js"></script>
     </div>
 </body>
+
+<script>
+// Custom Cursor
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = `${e.pageX}px`;
+        cursor.style.top = `${e.pageY}px`;
+    });
+
+    const interactiveElements = document.querySelectorAll('a, button, .interactive');
+    interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursor.style.width = '30px';
+            cursor.style.height = '30px';
+        });
+        element.addEventListener('mouseleave', () => {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+        });
+    });
+
+// Fade-in on Scroll
+    const sections = document.querySelectorAll('.passion-section, .portfolio-grid');
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        section.classList.add('fade-out'); // Initial state
+        observer.observe(section);
+    });
+</script>
 </html>
