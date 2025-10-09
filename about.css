@@ -15,9 +15,51 @@ body {
   overflow-x: hidden;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #333;
-  background: transparent;
+  background: #ffffff;
   line-height: 1.6;
   text-align: justify;
+  position: relative;
+}
+
+
+/* Animated Background Elements */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(120, 119, 198, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 90% 80%, rgba(255, 119, 198, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 30% 60%, rgba(120, 219, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(74, 144, 226, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 50% 90%, rgba(255, 193, 7, 0.05) 0%, transparent 60%);
+  animation: backgroundFloat 25s ease-in-out infinite;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 60% 10%, rgba(120, 219, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(255, 119, 198, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(120, 119, 198, 0.06) 0%, transparent 50%);
+  animation: backgroundFloat 30s ease-in-out infinite reverse;
+  z-index: -1;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  25% { transform: translateY(-30px) rotate(2deg) scale(1.1); }
+  50% { transform: translateY(15px) rotate(-1deg) scale(0.9); }
+  75% { transform: translateY(-10px) rotate(1deg) scale(1.05); }
 }
 
 /* Text Justification for About Page */
@@ -175,6 +217,66 @@ nav a:hover {
 .about-section {
   padding: 100px 0;
   position: relative;
+  overflow: hidden;
+}
+
+/* Floating Abstract Elements - Multiple across page */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, rgba(74, 144, 226, 0.12), rgba(120, 219, 255, 0.12));
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.about-section::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 3%;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, rgba(255, 119, 198, 0.12), rgba(120, 119, 198, 0.12));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: float 8s ease-in-out infinite reverse;
+  z-index: 1;
+}
+
+/* Additional floating elements */
+.about-content::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+  border-radius: 20% 80% 80% 20% / 80% 20% 80% 20%;
+  animation: float 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+.about-content::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  right: 8%;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.1));
+  border-radius: 50%;
+  animation: float 7s ease-in-out infinite reverse;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
 }
 
 .about-content {
@@ -184,6 +286,7 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 .about-gallery {
@@ -237,6 +340,19 @@ nav a:hover {
 
 .about-gallery img:hover {
   transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.main-image {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.small-image:first-of-type {
+  animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+.small-image:last-of-type {
+  animation: slideInRight 0.8s ease-out 0.4s both;
 }
 
 /* Responsive design */
@@ -329,6 +445,33 @@ nav a:hover {
   gap: 2rem;
   margin: 2rem 0;
   justify-content: center;
+  position: relative;
+}
+
+.skills-grid::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, rgba(156, 39, 176, 0.1), rgba(233, 30, 99, 0.1));
+  border-radius: 50%;
+  animation: float 9s ease-in-out infinite;
+  z-index: 1;
+}
+
+.skills-grid::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(45deg, rgba(0, 150, 136, 0.1), rgba(0, 188, 212, 0.1));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: float 11s ease-in-out infinite reverse;
+  z-index: 1;
 }
 
 @media (max-width: 1024px) {
@@ -565,6 +708,34 @@ nav a:hover {
   max-width: 1400px;
   margin: 0 auto;
   align-items: stretch;
+  position: relative;
+}
+
+.internships-container::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, rgba(255, 87, 34, 0.1), rgba(255, 152, 0, 0.1));
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+  z-index: 1;
+}
+
+.internships-container::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 20%;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(45deg, rgba(63, 81, 181, 0.1), rgba(103, 58, 183, 0.1));
+  border-radius: 20% 80% 80% 20% / 80% 20% 80% 20%;
+  animation: float 8s ease-in-out infinite reverse;
+  z-index: 1;
 }
 
 .flip-card {
@@ -603,6 +774,72 @@ nav a:hover {
     min-width: 200px;
     height: 300px;
   }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Add animations to elements */
+.skill-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+
+.about-gallery {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.about-text {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.skill-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.skill-icon:hover {
+  animation: none;
+  transform: scale(1.1);
 }
 
 .flip-card-inner {
