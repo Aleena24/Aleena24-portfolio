@@ -24,214 +24,11 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="header.css" type="text/css">
     <link rel="stylesheet" href="contact.css" type="text/css">
 
-    <style>
-        /* ========== Animated Background ========== */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .gradient-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.6;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .orb-1 {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(135deg, #06b6d4, #6366f1);
-            top: 60%;
-            right: 10%;
-            animation-delay: -7s;
-        }
-
-        .orb-3 {
-            width: 150px;
-            height: 150px;
-            background: linear-gradient(135deg, #ec4899, #06b6d4);
-            bottom: 20%;
-            left: 50%;
-            animation-delay: -14s;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-            33% {
-                transform: translateY(-30px) rotate(120deg);
-            }
-            66% {
-                transform: translateY(30px) rotate(240deg);
-            }
-        }
-
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-            background: transparent;
-        }
-
-        /* Typography */
-        * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-weight: 600;
-            line-height: 1.2;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        /* Modern Header */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid #e5e7eb;
-            transition: all 0.3s ease;
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .header nav a {
-            text-decoration: none;
-            color: #6b7280;
-            font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-        }
-
-        .header nav a:hover,
-        .header nav a.active {
-            color: #6366f1;
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        .header nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #6366f1;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .header nav a:hover::after,
-        .header nav a.active::after {
-            width: 100%;
-        }
-
-        /* Social Links */
-        .social-vertical {
-            position: fixed;
-            right: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 100;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .social-vertical .rotate {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-size: 0.85rem;
-            color: #6b7280;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-
-        .social-vertical .icons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .social-vertical .icons a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6b7280;
-            text-decoration: none;
-            font-size: 1.1rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .social-vertical .icons a:hover {
-            background: #6366f1;
-            color: white;
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-        }
-
-        /* Main Content Spacing */
-        .main-content {
-            padding-top: 100px;
-        }
-    </style>
 </head>
-<body>
+<body class="contact-page">
     <!-- Animated Background -->
     <div class="animated-bg">
         <div class="gradient-orb orb-1"></div>
@@ -245,24 +42,8 @@
     </div>
 
     <div class="content-wrapper">
-        <!-- Header Section Begin -->
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="./img/logo/logo.jpg" alt="Aleena Varghese Logo" class="logo-img">
-                    </a>
-                </div>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Me</a>
-                    <a href="passion.html">Passion</a>
-                    <a href="project.html">Project</a>
-                    <a href="contact.html" class="active">Contact</a>
-                </nav>
-            </div>
-        </header>
-        <!-- Header End -->
+        <!-- Header Placeholder -->
+        <div id="header-placeholder"></div>
 
         <!-- Social Links -->
         <div class="social-vertical">
@@ -451,3 +232,6 @@
         observer.observe(section);
     });
 </script>
+
+<!-- Header Script -->
+<script src="header.js"></script>

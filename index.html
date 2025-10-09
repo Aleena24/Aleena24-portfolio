@@ -8,9 +8,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aleena Varghese | Full Stack Developer</title>
+  <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="index.css" />
 </head>
-<body>
+<body class="index-page">
   <!-- Animated Background -->
   <div class="animated-bg">
     <div class="gradient-orb orb-1"></div>
@@ -18,28 +19,8 @@
     <div class="gradient-orb orb-3"></div>
   </div>
 
-  <!-- Navigation -->
-  <nav class="modern-nav">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="index.html">
-          <img src="./img/logo/logo.jpg" alt="Aleena Varghese Logo" class="logo-img">
-        </a>
-      </div>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="passion.html" class="nav-link">Passion</a>
-        <a href="project.html" class="nav-link">Projects</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </nav>
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
 
   <!-- Main Content -->
   <main class="main-content">
@@ -51,16 +32,16 @@
             <span>Hello, I'm</span>
           </div>
           <h1 class="hero-title">
-            <span class="name-highlight">Aleena Varghese</span>
+            <span class="name-highlight"><b><b>Aleena Varghese</b></b></span>
           </h1>
           <div class="role-container">
             <span class="role-text">Full Stack Developer</span>
             <div class="role-underline"></div>
           </div>
           <p class="hero-description">
-            Crafting digital experiences with modern technologies, 
+            <b>Crafting digital experiences with modern technologies, 
             passionate about building scalable applications and 
-            creating innovative solutions that make a difference.
+            creating innovative solutions that make a difference.</b>
           </p>
           <div class="hero-buttons">
             <a href="project.html" class="btn btn-primary">
@@ -74,7 +55,7 @@
         </div>
         <div class="hero-image">
           <div class="image-container">
-            <img src="./img/about/AleenaV.png" alt="Aleena Varghese" class="profile-image" />
+            <img src="./img/about/AleenaV.jpg" alt="Aleena Varghese" class="profile-image" />
             <div class="image-decoration"></div>
             <div class="floating-elements">
               <div class="floating-icon">
@@ -184,14 +165,6 @@
       });
     });
 
-    // Mobile menu toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-active');
-      navToggle.classList.toggle('nav-toggle-active');
-    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -236,6 +209,9 @@
         element.style.transform = `translateY(${scrolled * speed}px)`;
       });
     });
-  </script>  
+  </script>
+
+  <!-- Header Script -->
+  <script src="header.js"></script>
 </body>
 </html>
