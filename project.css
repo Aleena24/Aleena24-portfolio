@@ -1,12 +1,35 @@
 /* ========== GLOBAL STYLES ========== */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #333;
   background: transparent;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ========== LOGO STYLING ========== */
+.logo-img {
+  height: 40px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
 /* ========== PARTICLE BACKGROUND ========== */
