@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #333;
-  background: #ffffff;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   line-height: 1.6;
   text-align: justify;
   position: relative;
@@ -414,11 +414,17 @@ nav a:hover {
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
-  color: #091d6b;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 .section-header h2::after {
@@ -486,30 +492,52 @@ nav a:hover {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+  
+  .about-section {
+    margin: 20px 10px;
+    padding: 80px 0;
+  }
+  
+  .education-section {
+    margin: 20px 10px;
+    padding: 80px 10px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title-education h2 {
+    font-size: 2.5rem;
+  }
 }
 
 
 .skill-card {
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .skill-icon {
-  font-size: 2.5rem;
-  color: #007bff;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
 }
 
 .skill-content h3 {
@@ -609,18 +637,23 @@ nav a:hover {
 }
 
 .section-title-education h2 {
-  font-size: 2.5em;
-  color: #091d6b;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .section-title-education h2::after {
   content: '';
-  width: 60px;
+  width: 80px;
   height: 4px;
-  background-color: #091d6b;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: absolute;
   bottom: -10px;
   left: 50%;
