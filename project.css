@@ -117,12 +117,23 @@
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
-/* ========== PROJECT PAGE WIDTH ========== */
-.project-page .content-wrapper,
-.project-page .passion-section,
-.project-page .main-content {
-  max-width: 1200px !important;
-  margin: 0 auto;
+/* ========== PROJECT PAGE SPACING & WIDTH ========== */
+.project-page .content-wrapper {
+  margin-top: 2rem !important;
+  padding-top: 2rem !important;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-page .passion-section {
+  margin-top: 2rem !important;
+  padding-top: 1rem !important;
+}
+
+/* Force spacing for project page content */
+.project-page .content-wrapper > *:first-child {
+  margin-top: 3rem !important;
 }
 
 /* ========== GLOBAL STYLES ========== */
@@ -202,7 +213,7 @@ body {
 }
 
 .header-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -314,7 +325,7 @@ nav a.active {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   padding: 0 20px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

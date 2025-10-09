@@ -1,3 +1,19 @@
+/* ========== ABOUT PAGE SPACING ========== */
+.about-page .content-wrapper {
+  margin-top: 2rem !important;
+  padding-top: 2rem !important;
+}
+
+.about-page .passion-section {
+  margin-top: 2rem !important;
+  padding-top: 1rem !important;
+}
+
+/* Force spacing for about page content */
+.about-page .content-wrapper > *:first-child {
+  margin-top: 3rem !important;
+}
+
 /* ========== ANIMATED BACKGROUND ========== */
 .animated-bg {
   position: fixed;
@@ -60,6 +76,9 @@
   position: relative;
   z-index: 1;
   background: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* ========== SOCIAL LINKS ========== */
@@ -256,6 +275,9 @@ body::after {
   position: relative;
   z-index: 1;
   background: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* ========== HEADER & NAVIGATION ========== */
@@ -271,7 +293,7 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -403,7 +425,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
@@ -858,7 +880,7 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   align-items: stretch;
   position: relative;
@@ -1101,7 +1123,7 @@ nav a:hover {
   overflow: hidden;
   position: relative;
   margin: 40px auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .skills-carousel-track {
@@ -1174,7 +1196,7 @@ nav a:hover {
 .skills-flip-section .container {
   position: relative;
   z-index: 1;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1315,7 +1337,7 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
