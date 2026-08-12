@@ -400,7 +400,7 @@
         <h5>${n.h}</h5>
         <p>${n.d}</p>
         <ul>${n.b.map(x => `<li>${x}</li>`).join("")}</ul>
-        <div class="chips">${n.c.map(x => `<span class="chip">${x}</span>`).join("")}</div>`;
+        <p class="meta-line">${n.c.join(" · ")}</p>`;
     }
     selectArch(0);
   }

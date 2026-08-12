@@ -8,105 +8,93 @@
 <link rel="icon" href="img/logo/AV.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --ink: #16181d;
-    --ink-2: #3d434e;
-    --ink-3: #6a7180;
-    --accent: #1f5fd6;
-    --rule: #d9dde4;
+    --ink: #1a1c20;
+    --ink-2: #33363c;
+    --ink-3: #5c6066;
+    --link: #1849a9;
+    --rule: #2a2d33;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body {
-    font-family: "Inter", system-ui, sans-serif;
-    background: #0b0d12;
+    font-family: "PT Serif", Georgia, "Times New Roman", serif;
+    background: #101216;
     color: var(--ink);
-    font-size: 9.55pt;
-    line-height: 1.44;
+    font-size: 9.6pt;
+    line-height: 1.42;
   }
   .page {
     width: 210mm;
     min-height: 297mm;
     margin: 24px auto;
     background: #fff;
-    padding: 13mm 14mm 12mm;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    padding: 11mm 13mm 11mm;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.45);
   }
-  a { color: var(--accent); text-decoration: none; }
+  a { color: var(--link); text-decoration: none; }
+  strong { font-weight: 700; }
 
-  /* header */
-  .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
-  h1 {
-    font-family: "Space Grotesk", "Inter", sans-serif;
-    font-size: 21.5pt; font-weight: 700; letter-spacing: -0.02em;
-    line-height: 1.05;
+  /* ---------- header ---------- */
+  .head-name {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
   }
-  .role-line { color: var(--accent); font-weight: 600; font-size: 10.5pt; margin-top: 3px; }
-  .contact { text-align: right; font-size: 8.6pt; color: var(--ink-2); line-height: 1.55; white-space: nowrap; }
-  .contact strong { color: var(--ink); font-weight: 600; }
+  h1 { font-size: 20.5pt; font-weight: 700; letter-spacing: 0.01em; }
+  .head-role { font-style: italic; font-size: 11pt; color: var(--ink-2); }
+  .head-contact {
+    margin-top: 4.5px;
+    font-size: 8.8pt; color: var(--ink-2);
+    line-height: 1.6;
+  }
+  .head-contact .sep { color: #9aa0a8; padding: 0 3px; }
+  .head-contact a { color: var(--ink-2); }
+  .head-contact a.lnk { color: var(--link); }
 
-  /* sections */
-  section { margin-top: 11px; }
+  /* ---------- sections ---------- */
+  section { margin-top: 9.5px; }
   h2 {
-    font-family: "Space Grotesk", "Inter", sans-serif;
-    font-size: 9.4pt; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+    font-size: 10.6pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
     color: var(--ink);
-    border-bottom: 1.1pt solid var(--ink);
-    padding-bottom: 2.5px; margin-bottom: 6.5px;
+    border-bottom: 1.35pt solid var(--rule);
+    padding-bottom: 2px;
+    margin-bottom: 5.5px;
+    break-after: avoid;
   }
-  p.summary { color: var(--ink-2); }
-  p.summary strong { color: var(--ink); font-weight: 600; }
+  .keep { break-inside: avoid; }
 
-  /* jobs */
-  .job { margin-bottom: 8.5px; break-inside: avoid; }
-  .job:last-child { margin-bottom: 0; }
-  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .job-title { font-weight: 700; font-size: 10.2pt; }
-  .job-when { color: var(--ink-3); font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
-  .job-org { color: var(--accent); font-weight: 600; font-size: 9.3pt; margin-top: 1px; }
-  .job-org span { color: var(--ink-3); font-weight: 400; }
-  ul.bullets { margin: 4px 0 0; padding-left: 13px; }
-  ul.bullets li { margin-bottom: 2.6px; color: var(--ink-2); }
-  ul.bullets li::marker { color: var(--accent); }
-  ul.bullets strong { color: var(--ink); font-weight: 600; }
+  p.profile { text-align: justify; color: var(--ink); }
 
-  .mini-jobs { display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--ink-2); font-size: 8.9pt; }
-  .mini-jobs span strong { color: var(--ink); font-weight: 600; }
+  /* ---------- entries ---------- */
+  .entry { margin-bottom: 7.5px; break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+  .entry-title { font-weight: 700; font-size: 10.2pt; }
+  .entry-meta { font-size: 8.9pt; color: var(--ink-2); white-space: nowrap; }
+  .entry-org { font-style: italic; color: var(--ink-2); font-size: 9.4pt; margin-top: 0.5px; }
+  .entry-stack { font-style: italic; color: var(--ink-3); font-size: 8.7pt; margin-top: 0.5px; }
 
-  /* projects */
-  .proj { margin-bottom: 6px; break-inside: avoid; }
-  .proj-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .proj-name { font-weight: 700; font-size: 9.7pt; }
-  .proj-stack { color: var(--ink-3); font-size: 8.2pt; white-space: nowrap; }
-  .proj p { color: var(--ink-2); margin-top: 1px; }
+  ul.b { margin: 2.5px 0 0; padding-left: 12.5px; }
+  ul.b li { margin-bottom: 2px; text-align: justify; color: var(--ink); }
+  ul.b li::marker { color: var(--ink); }
+
+  .mini-line { color: var(--ink); font-size: 9.2pt; margin-top: 1px; }
+  .mini-line + .mini-line { margin-top: 2.5px; }
+  .mini-line .entry-meta { white-space: normal; }
 
   /* skills */
-  .skills { display: grid; grid-template-columns: 108px 1fr; row-gap: 3.6px; column-gap: 14px; }
-  .skills dt { font-weight: 600; color: var(--ink); font-size: 8.9pt; }
-  .skills dd { color: var(--ink-2); }
+  .skill-line { margin-bottom: 2.6px; text-align: justify; }
+  .skill-line strong { font-weight: 700; }
 
-  /* publication */
-  .pub-title { font-weight: 700; font-size: 9.9pt; }
-  .pub-meta { color: var(--ink-2); margin-top: 1px; }
-  .pub-meta a { font-weight: 600; }
+  /* two column (education | languages etc.) */
+  .edu-row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+  .edu-row .entry-meta { text-align: right; }
 
-  /* education */
-  .edu { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 4.5px; }
-  .edu b { font-weight: 700; }
-  .edu .inst { color: var(--ink-2); }
-  .edu .when { color: var(--ink-3); font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
+  .inline-para { text-align: justify; color: var(--ink); }
 
-  .inline-list { color: var(--ink-2); }
-  .inline-list strong { color: var(--ink); font-weight: 600; }
-
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
-
-  /* print */
-  @page { size: A4; margin: 12mm 14mm; }
-  h2 { break-after: avoid; }
-  .keep { break-inside: avoid; }
+  /* ---------- print ---------- */
+  @page { size: A4; margin: 11mm 13mm; }
   @media print {
     body { background: #fff; }
     .page { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; }
@@ -116,153 +104,185 @@
 <body>
 <div class="page">
 
-  <header class="head">
-    <div>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="head-name">
       <h1>Aleena Varghese</h1>
-      <div class="role-line">Software Engineer — Full-Stack · APIs · AI/ML</div>
+      <span class="head-role">Software Engineer — Full-Stack, APIs &amp; AI/ML</span>
     </div>
-    <div class="contact">
-      <div><a href="mailto:aleenatheresa024@gmail.com"><strong>aleenatheresa024@gmail.com</strong></a> · +91 94997 19173</div>
-      <div><a href="https://github.com/Aleena24">github.com/Aleena24</a> · <a href="https://www.linkedin.com/in/aleena-varghese-atv024/">linkedin.com/in/aleena-varghese-atv024</a></div>
-      <div>Kerala, India · <a href="https://medium.com/@alinavarghese009">medium.com/@alinavarghese009</a></div>
+    <div class="head-contact">
+      <div><a href="mailto:aleenatheresa024@gmail.com">aleenatheresa024@gmail.com</a><span class="sep">·</span>+91 94997 19173<span class="sep">·</span>Kerala, India</div>
+      <div><a class="lnk" href="https://github.com/Aleena24">github.com/Aleena24</a><span class="sep">·</span><a class="lnk" href="https://www.linkedin.com/in/aleena-varghese-atv024/">linkedin.com/in/aleena-varghese-atv024</a><span class="sep">·</span><a class="lnk" href="https://medium.com/@alinavarghese009">medium.com/@alinavarghese009</a></div>
     </div>
   </header>
 
+  <!-- ================= PROFILE ================= -->
   <section>
-    <h2>Summary</h2>
-    <p class="summary">
-      Software engineer who builds <strong>production systems end to end</strong> — full-stack platforms, REST APIs,
+    <h2>Profile</h2>
+    <p class="profile">
+      Software engineer building <strong>production systems end to end</strong> — full-stack platforms, REST APIs,
       AI/ML and Google Cloud infrastructure. Founding engineer of <strong>CelerSCET</strong>, a campus-wide ERP
-      (90+ modules, ~500k LOC) running admissions, enrollment, academics and administration in production, with
-      <strong>1,600+ commits and 680+ pull requests merged</strong> as platform lead. MSc in AI/ML;
-      IEEE-published GAN research. Focused on system design, data integrity, automated testing and reliable deployments.
+      (90+ modules, ~500k lines of code) that runs admissions, enrollment, academics and administration for an
+      engineering college, with <strong>1,600+ commits and 680+ pull requests merged</strong> as platform lead.
+      MSc in Artificial Intelligence &amp; Machine Learning; IEEE-published GAN research. Focused on
+      system design, data integrity, automated testing and reliable cloud deployments.
     </p>
   </section>
 
+  <!-- ================= EXPERIENCE ================= -->
   <section>
-    <h2>Experience</h2>
+    <h2>Professional Experience</h2>
 
-    <div class="job">
-      <div class="job-top">
-        <div class="job-title">Software Engineer · Full-Stack Developer</div>
-        <div class="job-when">Nov 2025 — Present</div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Software Engineer · Full-Stack Developer</span>
+        <span class="entry-meta">11/2025 – Present</span>
       </div>
-      <div class="job-org">CelerSCET <span>· Sahrdaya College of Engineering &amp; Technology, Kerala</span></div>
-      <ul class="bullets">
+      <div class="entry-org">CelerSCET — Sahrdaya College of Engineering and Technology, Kerala</div>
+      <ul class="b">
         <li><strong>Architected and bootstrapped a campus-wide ERP</strong> serving the full student lifecycle in production — React 18/Vite SPA (PWA), Node.js/Express REST API (~79 route segments), Supabase PostgreSQL with row-level security, deployed on Google Cloud Run.</li>
         <li><strong>Engineered the admission platform end to end</strong> — multi-step applications, OTP applicant authentication, quota- and degree-aware validation, Razorpay payment integration, QR verification, branded PDF exports and analytics — processing <strong>1,500+ applications and 500+ admissions</strong> in its first cycle.</li>
-        <li><strong>Designed the student provisioning pipeline</strong> — batch creation, class allocation, SR-number generation and institutional email — as a dependency-ordered workflow converting admitted applicants into live student accounts.</li>
-        <li><strong>Implemented platform-wide authorization, session security and shared engines</strong> — a 3-layer permission model with relationally scoped rights (HoD, class teacher, coordinators), enforceable session revocation, registry-driven notifications, a generic approvals engine, and an audit trail with attributable writes and restorable deletes.</li>
-        <li><strong>Own CI/CD and cloud infrastructure</strong>: Cloud Build → Cloud Run (staging + production), Artifact Registry, Cloud Storage, Secret Manager and Cloud Logging; reduced build times from 45+ min to ~4 min and eliminated stale-deploy caching failures.</li>
-        <li><strong>Lead integration for a 5-engineer team</strong> — 680+ PRs reviewed and merged; top contributor to a 275-file automated test suite (~72k lines) that guards system invariants.</li>
+        <li><strong>Designed the student provisioning pipeline</strong> — batch creation, class allocation, SR-number generation and institutional email — as a dependency-ordered workflow that converts admitted applicants into live student accounts.</li>
+        <li><strong>Implemented platform-wide authorization and session security</strong> — a 3-layer permission engine with relationally scoped rights (HoD, class teacher, coordinators), device limits and enforceable session revocation — plus registry-driven notifications, a generic approvals engine and an audit trail with restorable deletes.</li>
+        <li><strong>Own CI/CD and cloud infrastructure</strong> — Cloud Build → Cloud Run (staging + production), Artifact Registry, Cloud Storage, Secret Manager, Cloud Logging; reduced build times from 45+ minutes to ~4 and eliminated stale-deploy caching failures.</li>
+        <li><strong>Lead integration for a 5-engineer team</strong> — 680+ pull requests reviewed and merged; top contributor to a 275-file automated test suite (~72k lines) guarding system invariants.</li>
       </ul>
     </div>
 
-    <div class="job">
-      <div class="job-top">
-        <div class="job-title">AIML Executive · Full-Stack Developer (APIs &amp; AI/ML)</div>
-        <div class="job-when">Jan 2025 — Dec 2025</div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">AIML Executive · Full-Stack Developer (APIs &amp; AI/ML)</span>
+        <span class="entry-meta">01/2025 – 12/2025</span>
       </div>
-      <div class="job-org">SenseSys Pvt. Ltd. <span>· Bangalore</span></div>
-      <ul class="bullets">
+      <div class="entry-org">SenseSys Pvt. Ltd. — Bangalore, Karnataka</div>
+      <ul class="b">
         <li><strong>Led an 8-member agile team</strong> as project lead for <strong>Hosting Cloudly</strong>, a cloud hosting platform — developed the React dashboard for uploads, deployment tracking and performance metrics, and integrated REST APIs for authentication, deployment status and log visualization.</li>
         <li><strong>Directed the ZeroCodeML frontend revamp</strong> — a no-code machine learning platform with automated EDA and model suggestions — building modular React components for model setup, data upload and training progress.</li>
-        <li><strong>Optimized UI load performance by ~30%</strong> through lazy loading, component optimization and asset compression; integrated Supabase-backed auth and data services.</li>
+        <li><strong>Optimized UI load performance by ~30%</strong> through lazy loading, component optimization and asset compression; integrated Supabase-backed authentication and data services.</li>
+        <li>Ran sprint planning, code reviews and Git workflows across the team.</li>
       </ul>
     </div>
 
-    <div class="job">
-      <div class="mini-jobs">
-        <span><strong>ML Engineer Intern</strong> — Prodigy Infotech (Apr–May 2024)</span>
-        <span><strong>Python Developer Intern</strong> — Psyliq (May–Jun 2024)</span>
-        <span><strong>Graphic Designer</strong> — NextU Empower (Sep–Dec 2024)</span>
-      </div>
+    <div class="entry">
+      <div class="mini-line"><strong>ML Engineer Intern</strong>, <i>Prodigy Infotech</i> <span class="entry-meta">(04/2024 – 05/2024)</span> · <strong>Python Developer Intern</strong>, <i>Psyliq</i> <span class="entry-meta">(05/2024 – 06/2024)</span> · <strong>Graphic Designer</strong>, <i>NextU Empower</i> <span class="entry-meta">(09/2024 – 12/2024)</span></div>
     </div>
   </section>
 
+  <!-- ================= PROJECTS ================= -->
   <section>
-    <h2>Selected Projects</h2>
-    <div class="proj">
-      <div class="proj-line">
-        <span class="proj-name">CelerSCET — Digital Campus ERP <span style="color:var(--ink-3); font-weight:400;">(production)</span></span>
-        <span class="proj-stack">React · Node.js · Supabase/PostgreSQL · GCP</span>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">CelerSCET — Digital Campus ERP <span style="font-weight:400; color:var(--ink-3);">(production)</span></span>
+        <span class="entry-meta">2026</span>
       </div>
-      <p>90+ module ERP ecosystem covering admissions → provisioning → academics → administration; detailed under Experience. Live at sahrdaya.celerscet.com.</p>
+      <div class="entry-stack">React · Node.js · Express · Supabase/PostgreSQL · Google Cloud</div>
+      <ul class="b">
+        <li>90+ module ERP ecosystem covering admissions → provisioning → academics → administration; live at sahrdaya.celerscet.com (detailed under Professional Experience).</li>
+      </ul>
     </div>
-    <div class="proj">
-      <div class="proj-line">
-        <span class="proj-name">Hosting Cloudly — Cloud Hosting Platform</span>
-        <span class="proj-stack">React · FastAPI · Supabase · Docker</span>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Hosting Cloudly — Cloud Hosting Platform</span>
+        <span class="entry-meta">2025</span>
       </div>
-      <p>End-to-end hosting platform (domains, Linux hosting, WordPress deployment) with dashboards for deployment tracking and monitoring; led the 8-member build team.</p>
+      <div class="entry-stack">React · FastAPI · Supabase · Docker</div>
+      <ul class="b">
+        <li>End-to-end hosting platform (domains, Linux hosting, WordPress deployment) with dashboards for deployment tracking and monitoring; led the 8-member build team at SenseSys.</li>
+      </ul>
     </div>
-    <div class="proj">
-      <div class="proj-line">
-        <span class="proj-name">ZeroCodeML — No-Code Machine Learning Platform</span>
-        <span class="proj-stack">React · Flask · scikit-learn</span>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">ZeroCodeML — No-Code Machine Learning Platform</span>
+        <span class="entry-meta">2025</span>
       </div>
-      <p>Upload a CSV and train models without code — automated EDA and model suggestions; led a 3-member team through the V1.0 launch.</p>
+      <div class="entry-stack">React · Flask · scikit-learn</div>
+      <ul class="b">
+        <li>Upload a CSV and train models without writing code — automated EDA, model suggestions and training progress; led a 3-member team through the V1.0 launch.</li>
+      </ul>
     </div>
-    <div class="proj">
-      <div class="proj-line">
-        <span class="proj-name">HospSurv — Hospital Feedback Platform</span>
-        <span class="proj-stack">React · Supabase</span>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">HospSurv — Hospital Feedback Platform</span>
+        <span class="entry-meta">2025</span>
       </div>
-      <p>Patient survey system with reward coupons, gamified flows and real-time admin dashboards for response tracking.</p>
+      <div class="entry-stack">React · JavaScript · Supabase</div>
+      <ul class="b">
+        <li>Patient survey system with reward coupons, gamified survey flows and real-time admin dashboards for response tracking.</li>
+      </ul>
     </div>
   </section>
 
+  <!-- ================= SKILLS ================= -->
   <section class="keep">
-    <h2>Technical Skills</h2>
-    <dl class="skills">
-      <dt>Languages</dt><dd>JavaScript (ES6+), Python, SQL, HTML5, CSS3</dd>
-      <dt>Frontend</dt><dd>React 18, Vite, React Router, MUI, Tailwind CSS, PWA / service workers</dd>
-      <dt>Backend &amp; APIs</dt><dd>Node.js, Express, REST API design, JWT authentication, Flask, FastAPI, Nodemailer, Razorpay</dd>
-      <dt>AI / ML</dt><dd>PyTorch, TensorFlow, scikit-learn, GANs, Pandas, NumPy, NLP</dd>
-      <dt>Databases</dt><dd>PostgreSQL, Supabase (RLS, Auth, Realtime), Redis, MySQL, SQLite</dd>
-      <dt>Cloud &amp; DevOps</dt><dd>Google Cloud (Cloud Run, Cloud Build, Cloud Storage, Artifact Registry, Secret Manager, Cloud Logging), Docker, CI/CD, Git/GitHub, Postman</dd>
-      <dt>Practices</dt><dd>Automated testing (node:test), code review, technical documentation, agile delivery</dd>
-    </dl>
+    <h2>Skills</h2>
+    <p class="skill-line"><strong>Languages:</strong> JavaScript (ES6+), Python, SQL, HTML5, CSS3</p>
+    <p class="skill-line"><strong>Frontend:</strong> React 18, Vite, React Router, MUI, Tailwind CSS, Progressive Web Apps</p>
+    <p class="skill-line"><strong>Backend &amp; APIs:</strong> Node.js, Express, REST API design, JWT authentication, Flask, FastAPI, Nodemailer, Razorpay integration</p>
+    <p class="skill-line"><strong>AI / ML:</strong> PyTorch, TensorFlow, scikit-learn, GANs, Pandas, NumPy, Natural Language Processing</p>
+    <p class="skill-line"><strong>Databases:</strong> PostgreSQL, Supabase (RLS, Auth, Realtime), Redis, MySQL, SQLite</p>
+    <p class="skill-line"><strong>Cloud &amp; DevOps:</strong> Google Cloud Platform (Cloud Run, Cloud Build, Cloud Storage, Artifact Registry, Secret Manager, Cloud Logging), Docker, CI/CD, Git/GitHub, Postman</p>
+    <p class="skill-line"><strong>Practices:</strong> Automated testing (node:test), code review, technical documentation, agile delivery</p>
   </section>
 
+  <!-- ================= PUBLICATIONS ================= -->
   <section class="keep">
-    <h2>Publication</h2>
-    <div class="pub-title">Enhancing Satellite Imagery with GAN-based Cloud Removal — IEEE, July 2025</div>
-    <p class="pub-meta">
-      Published in IEEE Xplore · DOI: <a href="https://doi.org/10.1109/ICECCC60120.2025.11063844">10.1109/ICECCC60120.2025.11063844</a> · Presented at ICECCC 2025, CMR Institute of Technology, Bengaluru.
-    </p>
-    <ul class="bullets" style="margin-top:3px;">
-      <li>Engineered a U-Net generator / ResNet discriminator GAN with Perlin-noise cloud synthesis, achieving <strong>~40% improvement in spatial accuracy</strong> over baseline models; benchmarked on EuroSAT with PSNR validation and GPU-accelerated training.</li>
+    <h2>Publications</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">“Enhancing Satellite Imagery with GAN-based Cloud Removal” — IEEE</span>
+        <span class="entry-meta">07/2025</span>
+      </div>
+      <div class="entry-org">Published in IEEE Xplore | DOI: <a href="https://doi.org/10.1109/ICECCC60120.2025.11063844">10.1109/ICECCC60120.2025.11063844</a> — presented at ICECCC 2025, CMR Institute of Technology, Bengaluru</div>
+      <ul class="b">
+        <li>Engineered a GAN architecture (U-Net generator, ResNet discriminator, Perlin-noise cloud synthesis) that improved spatial accuracy and clarity by <strong>~40%</strong> over baseline models.</li>
+        <li>Utilized tensor-level optimizations and GPU-based training to accelerate convergence; benchmarked on EuroSAT with PSNR validation for Earth-observation preprocessing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="keep">
+    <h2>Education</h2>
+    <div class="entry" style="margin-bottom:4px;">
+      <div class="edu-row">
+        <div><span class="entry-title">MSc in Artificial Intelligence and Machine Learning</span><div class="entry-org">CHRIST (Deemed to be University)</div></div>
+        <span class="entry-meta">2023 – 2025 | Bangalore, Karnataka</span>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="edu-row">
+        <div><span class="entry-title">Bachelor of Computer Applications</span><div class="entry-org">Christ College — Outstanding Student Award, Dept. of Computer Science</div></div>
+        <span class="entry-meta">2020 – 2023 | Rajkot, Gujarat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATES ================= -->
+  <section class="keep">
+    <h2>Certificates</h2>
+    <p class="inline-para">Deloitte Data Analytics Job Simulation · AWS Cloud Foundations · Machine Learning with Python · Natural Language Processing · Prompt Engineering for Generative AI · Introduction to Power BI · Data Engineering · Introduction to LLMs · Ethical AI</p>
+  </section>
+
+  <!-- ================= LEADERSHIP ================= -->
+  <section class="keep">
+    <h2>Leadership &amp; Contributor Experience</h2>
+    <ul class="b">
+      <li><strong>Project Lead — Hosting Cloudly &amp; ZeroCodeML:</strong> led an 8-member team at SenseSys building an AI-powered hosting platform, and a 3-member team at CHRIST University building a no-code ML tool.</li>
+      <li><strong>Media Head — Gateways 2023:</strong> directed a 30-member team covering branding, content strategy and social media for a national tech fest; produced 50+ event visuals, increasing digital reach by 80%.</li>
+      <li><strong>Workshop Facilitator — Canva &amp; Storytelling:</strong> conducted design and visual-storytelling workshops for 100+ students, including a 2-day national session at Illuminaire.</li>
+      <li><strong>Volunteer — ICSAC 2024:</strong> committee member, International Conference on Sustainable Advanced Computing · <strong>Student Coordinator — TechArena:</strong> digital strategy for Christ College's national IT fest.</li>
     </ul>
   </section>
 
-  <div class="two-col keep">
-    <section>
-      <h2>Education</h2>
-      <div class="edu">
-        <div><b>MSc, Artificial Intelligence &amp; Machine Learning</b><br /><span class="inst">CHRIST (Deemed to be University), Bangalore</span></div>
-        <div class="when">2023 — 2025</div>
-      </div>
-      <div class="edu">
-        <div><b>Bachelor of Computer Applications</b><br /><span class="inst">Christ College, Rajkot · Outstanding Student Award (CS Dept.)</span></div>
-        <div class="when">2020 — 2023</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Leadership &amp; Languages</h2>
-      <p class="inline-list" style="margin-bottom:3.5px;">
-        <strong>Project Lead</strong> — Hosting Cloudly (8-member) &amp; ZeroCodeML (3-member) teams ·
-        <strong>Media Head</strong> — Gateways 2023 national tech fest (30-member team) ·
-        <strong>Workshop Facilitator</strong> — design &amp; storytelling sessions for 100+ students
-      </p>
-      <p class="inline-list"><strong>Languages:</strong> English, Malayalam, Tamil, Hindi, Gujarati</p>
-    </section>
-  </div>
-
+  <!-- ================= LANGUAGES ================= -->
   <section class="keep">
-    <h2>Certifications</h2>
-    <p class="inline-list">Deloitte Data Analytics Job Simulation · AWS Cloud Foundations · Machine Learning with Python · Natural Language Processing · Prompt Engineering for Generative AI · Introduction to Power BI · Data Engineering · Ethical AI</p>
+    <h2>Languages</h2>
+    <p class="inline-para">English <span style="color:#9aa0a8;">|</span> Malayalam <span style="color:#9aa0a8;">|</span> Tamil <span style="color:#9aa0a8;">|</span> Hindi <span style="color:#9aa0a8;">|</span> Gujarati</p>
   </section>
 
 </div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>LinkedIn banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1584px; height: 396px; overflow: hidden; }
+  .banner {
+    position: relative;
+    width: 1584px; height: 396px;
+    background: #08090c;
+    color: #eceef4;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+  }
+  .glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(42% 70% at 78% 30%, rgba(107, 166, 255, 0.10), transparent 70%),
+      radial-gradient(30% 55% at 30% 90%, rgba(74, 223, 174, 0.05), transparent 70%);
+  }
+  .grid {
+    position: absolute; inset: 0; opacity: 0.5;
+    background-image:
+      linear-gradient(rgba(148,160,190,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148,160,190,0.07) 1px, transparent 1px);
+    background-size: 66px 66px;
+    -webkit-mask-image: radial-gradient(70% 90% at 60% 45%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(70% 90% at 60% 45%, #000 30%, transparent 100%);
+  }
+  svg.net { position: absolute; right: 40px; top: 0; height: 396px; }
+  .content {
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+    /* biased slightly right so the profile-photo overlap zone (bottom-left) stays clear */
+    padding-left: 120px;
+  }
+  .kicker {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: #9aa3b8;
+  }
+  .kicker .dot { color: #4adfae; }
+  h1 {
+    margin-top: 18px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 64px; font-weight: 600; letter-spacing: -0.025em;
+    line-height: 1;
+  }
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(94deg, #6ba6ff 5%, #93c1ff 50%, #4adfae 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .roles {
+    margin-top: 24px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #9aa3b8;
+  }
+  .roles .sl { color: #6ba6ff; padding: 0 14px; }
+  .rule {
+    width: 64px; height: 1px; margin: 26px auto 0;
+    background: linear-gradient(90deg, transparent, rgba(107,166,255,0.6), transparent);
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="glow"></div>
+  <div class="grid"></div>
+  <svg class="net" width="560" height="396" viewBox="0 0 560 396" fill="none" opacity="0.55">
+    <g stroke="rgba(148,160,190,0.28)">
+      <path d="M 420 60 L 480 105 L 452 170 L 380 150 Z M 452 170 L 500 230 M 480 105 L 545 88 M 380 150 L 330 210 L 372 268 L 445 250 L 500 230 M 372 268 L 350 330 M 445 250 L 498 305"/>
+    </g>
+    <g fill="#94a0be">
+      <circle cx="420" cy="60" r="3"/><circle cx="480" cy="105" r="2.4"/><circle cx="545" cy="88" r="2"/>
+      <circle cx="380" cy="150" r="2.6"/><circle cx="330" cy="210" r="2.2"/><circle cx="350" cy="330" r="2"/>
+      <circle cx="498" cy="305" r="2.2"/>
+    </g>
+    <circle cx="452" cy="170" r="3.4" fill="#6ba6ff"/>
+    <circle cx="452" cy="170" r="9" fill="rgba(107,166,255,0.18)"/>
+    <circle cx="445" cy="250" r="3" fill="#6ba6ff"/>
+    <circle cx="500" cy="230" r="3" fill="#4adfae"/>
+    <circle cx="500" cy="230" r="8" fill="rgba(74,223,174,0.16)"/>
+    <circle cx="372" cy="268" r="2.6" fill="#6ba6ff"/>
+  </svg>
+  <div class="content">
+    <p class="kicker"><span class="dot">●</span>&nbsp;&nbsp;Building production systems</p>
+    <h1>Software <em>Engineering</em></h1>
+    <p class="roles">Full-Stack <span class="sl">|</span> AI·ML <span class="sl">|</span> APIs <span class="sl">|</span> Cloud</p>
+    <div class="rule"></div>
+  </div>
+</div>
+</body>
+</html>
