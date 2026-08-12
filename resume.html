@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aleena Varghese — Résumé</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="img/logo/AV.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #16181d;
+    --ink-2: #3d434e;
+    --ink-3: #6a7180;
+    --accent: #1f5fd6;
+    --rule: #d9dde4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #0b0d12;
+    color: var(--ink);
+    font-size: 9.55pt;
+    line-height: 1.44;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 24px auto;
+    background: #fff;
+    padding: 13mm 14mm 12mm;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  a { color: var(--accent); text-decoration: none; }
+
+  /* header */
+  .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+  h1 {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 21.5pt; font-weight: 700; letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .role-line { color: var(--accent); font-weight: 600; font-size: 10.5pt; margin-top: 3px; }
+  .contact { text-align: right; font-size: 8.6pt; color: var(--ink-2); line-height: 1.55; white-space: nowrap; }
+  .contact strong { color: var(--ink); font-weight: 600; }
+
+  /* sections */
+  section { margin-top: 11px; }
+  h2 {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+    font-size: 9.4pt; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--ink);
+    border-bottom: 1.1pt solid var(--ink);
+    padding-bottom: 2.5px; margin-bottom: 6.5px;
+  }
+  p.summary { color: var(--ink-2); }
+  p.summary strong { color: var(--ink); font-weight: 600; }
+
+  /* jobs */
+  .job { margin-bottom: 8.5px; break-inside: avoid; }
+  .job:last-child { margin-bottom: 0; }
+  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-title { font-weight: 700; font-size: 10.2pt; }
+  .job-when { color: var(--ink-3); font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
+  .job-org { color: var(--accent); font-weight: 600; font-size: 9.3pt; margin-top: 1px; }
+  .job-org span { color: var(--ink-3); font-weight: 400; }
+  ul.bullets { margin: 4px 0 0; padding-left: 13px; }
+  ul.bullets li { margin-bottom: 2.6px; color: var(--ink-2); }
+  ul.bullets li::marker { color: var(--accent); }
+  ul.bullets strong { color: var(--ink); font-weight: 600; }
+
+  .mini-jobs { display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--ink-2); font-size: 8.9pt; }
+  .mini-jobs span strong { color: var(--ink); font-weight: 600; }
+
+  /* projects */
+  .proj { margin-bottom: 6px; break-inside: avoid; }
+  .proj-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .proj-name { font-weight: 700; font-size: 9.7pt; }
+  .proj-stack { color: var(--ink-3); font-size: 8.2pt; white-space: nowrap; }
+  .proj p { color: var(--ink-2); margin-top: 1px; }
+
+  /* skills */
+  .skills { display: grid; grid-template-columns: 108px 1fr; row-gap: 3.6px; column-gap: 14px; }
+  .skills dt { font-weight: 600; color: var(--ink); font-size: 8.9pt; }
+  .skills dd { color: var(--ink-2); }
+
+  /* publication */
+  .pub-title { font-weight: 700; font-size: 9.9pt; }
+  .pub-meta { color: var(--ink-2); margin-top: 1px; }
+  .pub-meta a { font-weight: 600; }
+
+  /* education */
+  .edu { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 4.5px; }
+  .edu b { font-weight: 700; }
+  .edu .inst { color: var(--ink-2); }
+  .edu .when { color: var(--ink-3); font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
+
+  .inline-list { color: var(--ink-2); }
+  .inline-list strong { color: var(--ink); font-weight: 600; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+
+  /* print */
+  @page { size: A4; margin: 12mm 14mm; }
+  h2 { break-after: avoid; }
+  .keep { break-inside: avoid; }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div>
+      <h1>Aleena Varghese</h1>
+      <div class="role-line">Software Engineer — Full-Stack · APIs · AI/ML</div>
+    </div>
+    <div class="contact">
+      <div><a href="mailto:aleenatheresa024@gmail.com"><strong>aleenatheresa024@gmail.com</strong></a> · +91 94997 19173</div>
+      <div><a href="https://github.com/Aleena24">github.com/Aleena24</a> · <a href="https://www.linkedin.com/in/aleena-varghese-atv024/">linkedin.com/in/aleena-varghese-atv024</a></div>
+      <div>Kerala, India · <a href="https://medium.com/@alinavarghese009">medium.com/@alinavarghese009</a></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Software engineer who builds <strong>production systems end to end</strong> — full-stack platforms, REST APIs,
+      AI/ML and Google Cloud infrastructure. Founding engineer of <strong>CelerSCET</strong>, a campus-wide ERP
+      (90+ modules, ~500k LOC) running admissions, enrollment, academics and administration in production, with
+      <strong>1,600+ commits and 680+ pull requests merged</strong> as platform lead. MSc in AI/ML;
+      IEEE-published GAN research. Focused on system design, data integrity, automated testing and reliable deployments.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">Software Engineer · Full-Stack Developer</div>
+        <div class="job-when">Nov 2025 — Present</div>
+      </div>
+      <div class="job-org">CelerSCET <span>· Sahrdaya College of Engineering &amp; Technology, Kerala</span></div>
+      <ul class="bullets">
+        <li><strong>Architected and bootstrapped a campus-wide ERP</strong> serving the full student lifecycle in production — React 18/Vite SPA (PWA), Node.js/Express REST API (~79 route segments), Supabase PostgreSQL with row-level security, deployed on Google Cloud Run.</li>
+        <li><strong>Engineered the admission platform end to end</strong> — multi-step applications, OTP applicant authentication, quota- and degree-aware validation, Razorpay payment integration, QR verification, branded PDF exports and analytics — processing <strong>1,500+ applications and 500+ admissions</strong> in its first cycle.</li>
+        <li><strong>Designed the student provisioning pipeline</strong> — batch creation, class allocation, SR-number generation and institutional email — as a dependency-ordered workflow converting admitted applicants into live student accounts.</li>
+        <li><strong>Implemented platform-wide authorization, session security and shared engines</strong> — a 3-layer permission model with relationally scoped rights (HoD, class teacher, coordinators), enforceable session revocation, registry-driven notifications, a generic approvals engine, and an audit trail with attributable writes and restorable deletes.</li>
+        <li><strong>Own CI/CD and cloud infrastructure</strong>: Cloud Build → Cloud Run (staging + production), Artifact Registry, Cloud Storage, Secret Manager and Cloud Logging; reduced build times from 45+ min to ~4 min and eliminated stale-deploy caching failures.</li>
+        <li><strong>Lead integration for a 5-engineer team</strong> — 680+ PRs reviewed and merged; top contributor to a 275-file automated test suite (~72k lines) that guards system invariants.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-title">AIML Executive · Full-Stack Developer (APIs &amp; AI/ML)</div>
+        <div class="job-when">Jan 2025 — Dec 2025</div>
+      </div>
+      <div class="job-org">SenseSys Pvt. Ltd. <span>· Bangalore</span></div>
+      <ul class="bullets">
+        <li><strong>Led an 8-member agile team</strong> as project lead for <strong>Hosting Cloudly</strong>, a cloud hosting platform — developed the React dashboard for uploads, deployment tracking and performance metrics, and integrated REST APIs for authentication, deployment status and log visualization.</li>
+        <li><strong>Directed the ZeroCodeML frontend revamp</strong> — a no-code machine learning platform with automated EDA and model suggestions — building modular React components for model setup, data upload and training progress.</li>
+        <li><strong>Optimized UI load performance by ~30%</strong> through lazy loading, component optimization and asset compression; integrated Supabase-backed auth and data services.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="mini-jobs">
+        <span><strong>ML Engineer Intern</strong> — Prodigy Infotech (Apr–May 2024)</span>
+        <span><strong>Python Developer Intern</strong> — Psyliq (May–Jun 2024)</span>
+        <span><strong>Graphic Designer</strong> — NextU Empower (Sep–Dec 2024)</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <div class="proj">
+      <div class="proj-line">
+        <span class="proj-name">CelerSCET — Digital Campus ERP <span style="color:var(--ink-3); font-weight:400;">(production)</span></span>
+        <span class="proj-stack">React · Node.js · Supabase/PostgreSQL · GCP</span>
+      </div>
+      <p>90+ module ERP ecosystem covering admissions → provisioning → academics → administration; detailed under Experience. Live at sahrdaya.celerscet.com.</p>
+    </div>
+    <div class="proj">
+      <div class="proj-line">
+        <span class="proj-name">Hosting Cloudly — Cloud Hosting Platform</span>
+        <span class="proj-stack">React · FastAPI · Supabase · Docker</span>
+      </div>
+      <p>End-to-end hosting platform (domains, Linux hosting, WordPress deployment) with dashboards for deployment tracking and monitoring; led the 8-member build team.</p>
+    </div>
+    <div class="proj">
+      <div class="proj-line">
+        <span class="proj-name">ZeroCodeML — No-Code Machine Learning Platform</span>
+        <span class="proj-stack">React · Flask · scikit-learn</span>
+      </div>
+      <p>Upload a CSV and train models without code — automated EDA and model suggestions; led a 3-member team through the V1.0 launch.</p>
+    </div>
+    <div class="proj">
+      <div class="proj-line">
+        <span class="proj-name">HospSurv — Hospital Feedback Platform</span>
+        <span class="proj-stack">React · Supabase</span>
+      </div>
+      <p>Patient survey system with reward coupons, gamified flows and real-time admin dashboards for response tracking.</p>
+    </div>
+  </section>
+
+  <section class="keep">
+    <h2>Technical Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>JavaScript (ES6+), Python, SQL, HTML5, CSS3</dd>
+      <dt>Frontend</dt><dd>React 18, Vite, React Router, MUI, Tailwind CSS, PWA / service workers</dd>
+      <dt>Backend &amp; APIs</dt><dd>Node.js, Express, REST API design, JWT authentication, Flask, FastAPI, Nodemailer, Razorpay</dd>
+      <dt>AI / ML</dt><dd>PyTorch, TensorFlow, scikit-learn, GANs, Pandas, NumPy, NLP</dd>
+      <dt>Databases</dt><dd>PostgreSQL, Supabase (RLS, Auth, Realtime), Redis, MySQL, SQLite</dd>
+      <dt>Cloud &amp; DevOps</dt><dd>Google Cloud (Cloud Run, Cloud Build, Cloud Storage, Artifact Registry, Secret Manager, Cloud Logging), Docker, CI/CD, Git/GitHub, Postman</dd>
+      <dt>Practices</dt><dd>Automated testing (node:test), code review, technical documentation, agile delivery</dd>
+    </dl>
+  </section>
+
+  <section class="keep">
+    <h2>Publication</h2>
+    <div class="pub-title">Enhancing Satellite Imagery with GAN-based Cloud Removal — IEEE, July 2025</div>
+    <p class="pub-meta">
+      Published in IEEE Xplore · DOI: <a href="https://doi.org/10.1109/ICECCC60120.2025.11063844">10.1109/ICECCC60120.2025.11063844</a> · Presented at ICECCC 2025, CMR Institute of Technology, Bengaluru.
+    </p>
+    <ul class="bullets" style="margin-top:3px;">
+      <li>Engineered a U-Net generator / ResNet discriminator GAN with Perlin-noise cloud synthesis, achieving <strong>~40% improvement in spatial accuracy</strong> over baseline models; benchmarked on EuroSAT with PSNR validation and GPU-accelerated training.</li>
+    </ul>
+  </section>
+
+  <div class="two-col keep">
+    <section>
+      <h2>Education</h2>
+      <div class="edu">
+        <div><b>MSc, Artificial Intelligence &amp; Machine Learning</b><br /><span class="inst">CHRIST (Deemed to be University), Bangalore</span></div>
+        <div class="when">2023 — 2025</div>
+      </div>
+      <div class="edu">
+        <div><b>Bachelor of Computer Applications</b><br /><span class="inst">Christ College, Rajkot · Outstanding Student Award (CS Dept.)</span></div>
+        <div class="when">2020 — 2023</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Leadership &amp; Languages</h2>
+      <p class="inline-list" style="margin-bottom:3.5px;">
+        <strong>Project Lead</strong> — Hosting Cloudly (8-member) &amp; ZeroCodeML (3-member) teams ·
+        <strong>Media Head</strong> — Gateways 2023 national tech fest (30-member team) ·
+        <strong>Workshop Facilitator</strong> — design &amp; storytelling sessions for 100+ students
+      </p>
+      <p class="inline-list"><strong>Languages:</strong> English, Malayalam, Tamil, Hindi, Gujarati</p>
+    </section>
+  </div>
+
+  <section class="keep">
+    <h2>Certifications</h2>
+    <p class="inline-list">Deloitte Data Analytics Job Simulation · AWS Cloud Foundations · Machine Learning with Python · Natural Language Processing · Prompt Engineering for Generative AI · Introduction to Power BI · Data Engineering · Ethical AI</p>
+  </section>
+
+</div>
+</body>
+</html>

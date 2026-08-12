@@ -1,217 +1,871 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aleena Varghese | Full Stack Developer</title>
-  <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aleena Varghese — Software Engineer · Full-Stack & AI/ML</title>
+  <meta name="description" content="Software engineer building production systems end to end — full-stack development, APIs, AI/ML and cloud infrastructure. Currently engineering CelerSCET, the ERP ecosystem of Sahrdaya College of Engineering & Technology." />
+  <meta name="theme-color" content="#07090d" />
+  <link rel="icon" href="img/logo/AV.ico" />
+  <meta property="og:title" content="Aleena Varghese — Software Engineer" />
+  <meta property="og:description" content="Full-stack developer & AI/ML engineer. Building CelerSCET — a production ERP ecosystem on React, Node.js, Supabase and Google Cloud." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
 </head>
-<body class="index-page">
-  <!-- Animated Background -->
-  <div class="animated-bg">
-    <div class="gradient-orb orb-1"></div>
-    <div class="gradient-orb orb-2"></div>
-    <div class="gradient-orb orb-3"></div>
-  </div>
+<body>
 
-  <!-- Header Placeholder -->
-  <div id="header-placeholder"></div>
+  <!-- ============================ NAV ============================ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#home" aria-label="Aleena Varghese — home">
+        <span class="nav-logo-mark">AV</span>
+        <span class="nav-logo-name">aleena<span>.varghese</span></span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#celerscet">CelerSCET</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume" class="nav-cta">Résumé</a>
+      </nav>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <div class="hero-section">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="greeting">
-            <span class="wave">👋</span>
-            <span>Hello, I'm</span>
-          </div>
-          <h1 class="hero-title">
-            <span class="name-highlight"><b><b>Aleena Varghese</b></b></span>
-          </h1>
-          <div class="role-container">
-            <span class="role-text">Full Stack Developer</span>
-            <div class="role-underline"></div>
-          </div>
-          <p class="hero-description">
-            <b>Crafting digital experiences with modern technologies, 
-            passionate about building scalable applications and 
-            creating innovative solutions that make a difference.</b>
+  <main>
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="home">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow mono"><span class="dot"></span>Software engineer · building CelerSCET ERP</p>
+          <h1 class="hero-title">I build <em>production software systems</em>, end&nbsp;to&nbsp;end.</h1>
+          <p class="hero-roles">
+            Full-Stack Developer <span class="sep">◆</span> AI/ML Engineer <span class="sep">◆</span> API &amp; Backend
           </p>
-          <div class="hero-buttons">
-            <a href="project.html" class="btn btn-primary">
-              <span>View My Work</span>
-              <i class="fas fa-arrow-right"></i>
+          <p class="hero-sub">
+            I design, ship and operate real systems — currently
+            <strong>CelerSCET</strong>, the digital campus ecosystem of Sahrdaya College of
+            Engineering &amp; Technology: a <a href="#celerscet">90-plus-module ERP</a> running on
+            React, Node.js, Supabase/PostgreSQL and Google Cloud.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#projects">
+              View projects
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="contact.html" class="btn btn-secondary">
-              <span>Get In Touch</span>
-            </a>
+            <a class="btn btn--ghost" href="#resume">View résumé</a>
+            <div class="hero-social">
+              <a href="https://github.com/Aleena24" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.35.77 1.05.77 2.12v3.15c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/aleena-varghese-atv024/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="hero-image">
-          <div class="image-container">
-            <img src="./img/about/AleenaV.jpg" alt="Aleena Varghese" class="profile-image" />
-            <div class="image-decoration"></div>
-            <div class="floating-elements">
-              <div class="floating-icon">
-                <i class="fab fa-react"></i>
+
+        <div class="hero-stats">
+          <div class="hero-stats-grid">
+            <div class="hero-stat">
+              <div class="hero-stat-num">1,600<sup>+</sup></div>
+              <div class="hero-stat-label">commits on one production ERP</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">90<sup>+</sup></div>
+              <div class="hero-stat-label">modules &amp; services in the platform</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">1,500<sup>+</sup></div>
+              <div class="hero-stat-label">admission applications processed</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">IEEE ×1</div>
+              <div class="hero-stat-label">peer-reviewed publication</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="line"></span>
+      </div>
+    </section>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">01 · About</p>
+          <h2 class="section-title">Engineering real systems,<br />not just applications.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="reveal">
+              I'm Aleena — a software engineer with an <strong>MSc in Artificial Intelligence &amp;
+              Machine Learning</strong> from CHRIST (Deemed to be University), Bangalore. My work sits
+              where <strong>full-stack engineering, APIs, AI/ML and cloud infrastructure</strong> meet
+              real-world business workflows.
+            </p>
+            <p class="reveal">
+              Over the last two years I've moved from ML research and product frontends into
+              <strong>owning production systems end to end</strong>. At SenseSys I led the team behind
+              Hosting Cloudly and ZeroCodeML. Today I'm the founding engineer of
+              <span class="accent">CelerSCET</span> — a campus-wide ERP that runs admissions,
+              enrollment, academics and administration for an engineering college, in production on
+              Google Cloud.
+            </p>
+            <p class="reveal">
+              What I care about: systems that survive contact with real users — clean API boundaries,
+              single sources of truth, auditability, tests that catch drift, and deploys that don't lie.
+            </p>
+
+            <div class="about-points">
+              <div class="about-point reveal">
+                <div class="about-point-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <div>
+                  <h3>Full-stack product engineering</h3>
+                  <p>React SPAs and PWAs backed by Node.js/Express REST APIs — designed as one system, not two halves.</p>
+                </div>
               </div>
-              <div class="floating-icon">
-                <i class="fab fa-python"></i>
+              <div class="about-point reveal" data-delay="1">
+                <div class="about-point-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12.7 10h.05A6.25 6.25 0 0 1 19 16.25V18"/><circle cx="12" cy="6" r="4"/><circle cx="19" cy="20" r="2"/><circle cx="5" cy="20" r="2"/><path d="M5 18v-1.75A6.25 6.25 0 0 1 11.25 10h.05"/></svg>
+                </div>
+                <div>
+                  <h3>AI/ML in practice</h3>
+                  <p>From GAN research published with IEEE to shipping ML-backed features — model training to deployment.</p>
+                </div>
               </div>
-              <div class="floating-icon">
-                <i class="fab fa-js-square"></i>
+              <div class="about-point reveal" data-delay="2">
+                <div class="about-point-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-.42-8.98 6 6 0 0 0-11.4 1.68A3.5 3.5 0 0 0 6.5 19h11Z"/></svg>
+                </div>
+                <div>
+                  <h3>Cloud infrastructure &amp; operations</h3>
+                  <p>CI/CD on Cloud Build, workloads on Cloud Run, storage on GCS — with staging, caching policy and backups handled properly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-side reveal" data-delay="1">
+            <figure class="about-photo">
+              <img src="img/about/AleenaV.jpg" alt="Aleena Varghese" width="880" height="1012" loading="lazy" />
+              <figcaption class="about-photo-tag">
+                <div class="mono">● In production</div>
+                <div>Aleena Varghese</div>
+              </figcaption>
+            </figure>
+            <dl class="about-facts">
+              <div class="about-fact"><dt>Current</dt><dd>Software Engineer · CelerSCET</dd></div>
+              <div class="about-fact"><dt>Education</dt><dd>MSc AI &amp; ML · CHRIST University</dd></div>
+              <div class="about-fact"><dt>Focus</dt><dd>Full-stack · APIs · AI/ML · Cloud</dd></div>
+              <div class="about-fact"><dt>Languages</dt><dd>English · Malayalam · Tamil · Hindi</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ EXPERIENCE ============================ -->
+    <section class="section section--tint" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">02 · Experience</p>
+          <h2 class="section-title">From ML foundations<br />to production systems.</h2>
+          <p class="section-lede">A deliberate progression: research and AI/ML → product engineering and team leadership → owning a multi-module production platform.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- CelerSCET -->
+          <div class="tl-item tl-item--now reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <p class="tl-phase mono">Chapter 04 — Production systems</p>
+            <div class="tl-card">
+              <div class="tl-top">
+                <h3 class="tl-role">Software Engineer · Full-Stack Developer</h3>
+                <span class="tl-when">Nov 2025 — Present</span>
+              </div>
+              <p class="tl-org">CelerSCET <span>· Sahrdaya College of Engineering &amp; Technology, Kerala</span></p>
+              <p class="tl-body">
+                Founding engineer of the CelerSCET ERP — the college's digital campus platform.
+                Bootstrapped the codebase, designed the architecture, and lead development and
+                integration across a small engineering team: 1,600+ commits and 680+ pull requests
+                merged into a system of 90+ modules.
+              </p>
+              <ul class="tl-list">
+                <li>Built the admission platform end to end — multi-step applications, OTP applicant auth, quota rules, Razorpay payments, QR verification and reporting — which processed <strong>1,500+ applications</strong> in its first cycle.</li>
+                <li>Designed the student provisioning pipeline: batches → classes → SR numbers → institutional email, as one dependency-ordered workflow.</li>
+                <li>Own the platform's cloud infrastructure: Cloud Build CI/CD to Cloud Run (staging + production), GCS storage, caching policy and nightly backups.</li>
+                <li>Established the engineering system itself: 275-file server test suite, audit trail with restorable deletes, and the internal docs architecture.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="chip">React 18</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">GCP</span><span class="chip">Cloud Run</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SenseSys -->
+          <div class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <p class="tl-phase mono">Chapter 03 — Product &amp; leadership</p>
+            <div class="tl-card">
+              <div class="tl-top">
+                <h3 class="tl-role">AIML Executive · Full-Stack Developer (APIs &amp; AI/ML)</h3>
+                <span class="tl-when">Jan 2025 — Dec 2025</span>
+              </div>
+              <p class="tl-org">SenseSys Pvt. Ltd. <span>· Bangalore</span></p>
+              <p class="tl-body">
+                Led development on SenseSys's product line as project lead of an 8-member agile team —
+                building AI-driven platforms across the stack, from React frontends to API and
+                deployment work.
+              </p>
+              <ul class="tl-list">
+                <li>Led <strong>Hosting Cloudly</strong> — a cloud hosting platform with dashboards for uploads, deployment tracking and monitoring; built the React frontend and integrated REST APIs for auth, deployment status and logs.</li>
+                <li>Drove the <strong>ZeroCodeML</strong> frontend revamp — a no-code machine learning platform with auto-EDA and model suggestions.</li>
+                <li>Improved UI load performance by ~30% through lazy loading, component optimization and asset compression.</li>
+                <li>Ran sprint planning, code reviews and Git workflows across the team.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="chip">React</span><span class="chip">Tailwind</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Supabase</span><span class="chip">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Early roles -->
+          <div class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <p class="tl-phase mono">Chapter 02 — AI/ML groundwork</p>
+            <div class="tl-compact">
+              <div class="tl-mini">
+                <h4>ML Engineer Intern</h4>
+                <p class="org">Prodigy Infotech</p>
+                <p class="when">Apr — May 2024</p>
+              </div>
+              <div class="tl-mini">
+                <h4>Python Developer Intern</h4>
+                <p class="org">Psyliq</p>
+                <p class="when">May — Jun 2024</p>
+              </div>
+              <div class="tl-mini">
+                <h4>Graphic Designer</h4>
+                <p class="org">NextU Empower</p>
+                <p class="when">Sep — Dec 2024</p>
+              </div>
+              <div class="tl-mini">
+                <h4>GDSC Infographics Core Lead</h4>
+                <p class="org">Google Developer Student Clubs · CHRIST</p>
+                <p class="when">2023 — 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <p class="tl-phase mono">Chapter 01 — Foundations</p>
+            <div class="tl-compact">
+              <div class="tl-mini">
+                <h4>MSc — Artificial Intelligence &amp; Machine Learning</h4>
+                <p class="org">CHRIST (Deemed to be University), Bangalore</p>
+                <p class="when">2023 — 2025</p>
+              </div>
+              <div class="tl-mini">
+                <h4>Bachelor of Computer Applications</h4>
+                <p class="org">Christ College, Rajkot</p>
+                <p class="when">2020 — 2023 · Outstanding Student Award</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Quick Stats -->
-    <section class="quick-stats">
-      <div class="stats-container">
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Projects Completed</div>
+    <!-- ============================ CELERSCET CASE STUDY ============================ -->
+    <section class="section" id="celerscet">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">03 · Flagship case study</p>
+          <h2 class="section-title">CelerSCET — a campus-wide<br />ERP ecosystem in production.</h2>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">9+</div>
-          <div class="stat-label">Months Experience</div>
+
+        <!-- overview panel -->
+        <div class="cs-hero reveal">
+          <div class="cs-hero-badges">
+            <span class="badge badge--live">In production</span>
+            <span class="badge">Nov 2025 — Present</span>
+            <span class="badge">Founding engineer</span>
+          </div>
+          <h3>One platform for the entire student lifecycle — enquiry to graduation.</h3>
+          <p>
+            CelerSCET is the digital campus ecosystem of Sahrdaya College of Engineering &amp;
+            Technology: a full ERP covering admissions, enrollment, student records, academics,
+            faculty operations and campus administration. I bootstrapped the platform, designed its
+            architecture, and lead development and integration across the engineering team.
+          </p>
+          <div class="cs-hero-meta">
+            <div><div class="k mono">Role</div><div class="v">Software Engineer</div></div>
+            <div><div class="k mono">Modules</div><div class="v">90+</div></div>
+            <div><div class="k mono">Codebase</div><div class="v">~500k LOC</div></div>
+            <div><div class="k mono">Status</div><div class="v mint">Live · sahrdaya.celerscet.com</div></div>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">10+</div>
-          <div class="stat-label">Technologies</div>
+
+        <!-- problem / system -->
+        <div class="cs-block reveal">
+          <div class="cs-block-head"><span class="idx">3.1</span><h4>The problem &amp; the system</h4></div>
+          <p class="cs-prose">
+            College operations traditionally live in disconnected tools — admission registers,
+            spreadsheets for allocation, paper attendance, separate portals for every department.
+            Data gets re-entered, drifts out of sync, and nobody can see a student's full journey.
+          </p>
+          <p class="cs-prose">
+            CelerSCET replaces that with <strong>one interconnected platform</strong>: every stage of
+            the student lifecycle flows into the next, every write is attributable, and every module
+            shares the same identity, permission and notification systems.
+          </p>
+          <div class="cs-cols">
+            <div class="cs-panel">
+              <h5>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2.5 2.5"/></svg>
+                What the platform runs
+              </h5>
+              <ul>
+                <li>Admissions — enquiry to admitted, across quotas and degree types</li>
+                <li>Provisioning — applicant → student, batches, classes, SR numbers, email</li>
+                <li>Academics — timetables, attendance, assessment, course plans, curriculum</li>
+                <li>Administration — user &amp; role management, approvals, audit, payments</li>
+                <li>Campus life — calendar &amp; events, leave, library, placement, forums, HDP</li>
+              </ul>
+            </div>
+            <div class="cs-panel">
+              <h5>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                My contribution
+              </h5>
+              <ul>
+                <li>Bootstrapped the monorepo and overall architecture (Jan 2026, solo start)</li>
+                <li>Built admissions, payments, provisioning, calendar &amp; events, dashboards, data supervision</li>
+                <li>Own auth/sessions, notifications &amp; approvals engines, cloud infrastructure</li>
+                <li>Integrator for the team — 680+ PRs reviewed &amp; merged; top author of the test suite</li>
+                <li>Teammates own timetable &amp; attendance, assessment, and curriculum modules</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">80%</div>
-          <div class="stat-label">Happy Clients</div>
+
+        <!-- lifecycle pipeline -->
+        <div class="cs-block reveal">
+          <div class="cs-block-head"><span class="idx">3.2</span><h4>The lifecycle pipeline</h4></div>
+          <p class="cs-prose">
+            The ERP is designed as a <strong>workflow pipeline</strong>, not a bag of features — each
+            stage hands verified data to the next. Select a stage to explore it.
+          </p>
+          <div class="pipeline">
+            <div class="pipeline-track" role="tablist" aria-label="ERP lifecycle stages" id="pipe-track"></div>
+            <div class="pipe-detail" id="pipe-detail" role="tabpanel"></div>
+          </div>
+        </div>
+
+        <!-- architecture -->
+        <div class="cs-block reveal">
+          <div class="cs-block-head"><span class="idx">3.3</span><h4>Architecture</h4></div>
+          <p class="cs-prose">
+            A React SPA served as a PWA, a Node.js REST API on Cloud Run, and Supabase PostgreSQL
+            under row-level security — with Google Cloud providing build, storage, DNS, secrets and
+            logging. Select any component.
+          </p>
+          <div class="arch">
+            <div class="arch-map" id="arch-map" role="tablist" aria-label="System architecture components"></div>
+            <aside class="arch-info" id="arch-info" role="tabpanel"></aside>
+          </div>
+        </div>
+
+        <!-- engineering challenges -->
+        <div class="cs-block reveal">
+          <div class="cs-block-head"><span class="idx">3.4</span><h4>Engineering challenges</h4></div>
+          <p class="cs-prose">
+            The hard parts of an ERP aren't screens — they're correctness, integrity and operations.
+            A few problems this system forced me to solve properly:
+          </p>
+          <div class="challenge-grid">
+            <article class="challenge reveal">
+              <p class="mono">Correctness</p>
+              <h5>Reports that account for every row</h5>
+              <p>Admission reports silently lost applicants: offset pagination over non-unique sort keys, status sets that drifted from the real state machine, filters built on free text instead of foreign keys. I rebuilt them around single sources of truth — one status grouping, one facet rule, stable id-tiebroken paging — with live counts so a filter that drops rows can never look "correct".</p>
+            </article>
+            <article class="challenge reveal" data-delay="1">
+              <p class="mono">Workflow design</p>
+              <h5>Provisioning as a dependency chain</h5>
+              <p>Turning 500+ admitted applicants into students touches batches, class allocation, section splits, SR number generation and institutional email. I built it as a guided multi-step pipeline that follows the real dependency order, generates identifiers deterministically, and notifies each student when their account goes live.</p>
+            </article>
+            <article class="challenge reveal">
+              <p class="mono">Authorization</p>
+              <h5>Access control shaped like a real institution</h5>
+              <p>A three-layer permission engine (role defaults → designation extensions → admin overrides) plus relational rights — HoD, class teacher, coordinators — because real authority is scoped, not global. Sessions enforce device limits with revocation that actually works: per-request checks, realtime kill, and a heartbeat fallback.</p>
+            </article>
+            <article class="challenge reveal" data-delay="1">
+              <p class="mono">Data integrity</p>
+              <h5>Single sources of truth, enforced by tests</h5>
+              <p>Every cross-cutting rule — date validation bounds, vocabularies, status groups — lives in exactly one module, mirrored client and server. The 275-file test suite includes guards that fail the build if a second copy of a rule ever appears. Drift becomes a red test, not a production bug.</p>
+            </article>
+            <article class="challenge reveal">
+              <p class="mono">Operations</p>
+              <h5>Deploys that don't lie</h5>
+              <p>I own the pipeline: Cloud Build triggers building staging (dev) and production (main) onto Cloud Run. Solved the classics properly — stale frontends fixed with a real cache policy (hashed assets immutable, index.html no-cache), build times cut from 45+ minutes back to ~4 by removing a runaway image-pull step, env flags made observable at boot.</p>
+            </article>
+            <article class="challenge reveal" data-delay="1">
+              <p class="mono">Accountability</p>
+              <h5>Auditability as a first-class feature</h5>
+              <p>Every database write is attributable to a user; deleted rows keep before-images and can be restored; the audit schema is reachable only through guarded RPCs; nightly pg_dump backups land in Cloud Storage. In an institution, "who changed this?" must always have an answer.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- outcome -->
+        <div class="cs-block reveal">
+          <div class="cs-block-head"><span class="idx">3.5</span><h4>Outcome &amp; ecosystem</h4></div>
+          <div class="cs-outcome">
+            <div class="outcome-card">
+              <div class="big">1,500<span>+</span></div>
+              <p>applications handled by the admission platform in the 2026–27 cycle, across government, management and NRI quotas — 500+ admissions confirmed.</p>
+            </div>
+            <div class="outcome-card">
+              <div class="big">90<span>+</span></div>
+              <p>service modules in daily use by students, faculty, HoDs and administrators — from attendance registers to approval workflows.</p>
+            </div>
+            <div class="outcome-card">
+              <div class="big">275</div>
+              <p>server test files (~72k lines) guarding invariants, plus a full audit trail — built to be operated, not just launched.</p>
+            </div>
+          </div>
+          <div class="eco-strip">
+            <div class="eco-cell">
+              <p class="mono">ERP</p>
+              <p class="domain">sahrdaya.celerscet.com</p>
+              <p>The production ERP — students, faculty and administration.</p>
+            </div>
+            <div class="eco-cell">
+              <p class="mono">API</p>
+              <p class="domain">api.celerscet.com</p>
+              <p>The Express REST backend on Cloud Run, serving every client.</p>
+            </div>
+            <div class="eco-cell">
+              <p class="mono">Public site</p>
+              <p class="domain">celerscet.com</p>
+              <p>The public-facing web presence of the CelerSCET platform.</p>
+            </div>
+            <div class="eco-cell">
+              <p class="mono">Support · rolling out</p>
+              <p class="domain">support.celerscet.com</p>
+              <p>Dedicated helpdesk environment with email-based ticketing for students and staff, planned to connect to the ERP via SSO.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section class="section section--tint" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">04 · Selected work</p>
+          <h2 class="section-title">Projects with real users<br />and real constraints.</h2>
+        </div>
+
+        <!-- 01 CelerSCET -->
+        <article class="proj-feature reveal">
+          <div>
+            <p class="proj-idx">01 / Production ERP</p>
+            <h3 class="proj-title">CelerSCET</h3>
+            <p class="proj-tagline">Digital campus ecosystem · Sahrdaya College of Engineering &amp; Technology</p>
+            <p class="proj-desc">
+              A 90-plus-module ERP running the full student lifecycle in production — admissions,
+              provisioning, academics, administration and campus life on one platform.
+            </p>
+            <ul class="proj-facts">
+              <li><strong>Role</strong> — founding engineer: architecture, core modules, cloud infrastructure, integration.</li>
+              <li><strong>Impact</strong> — 1,500+ applications processed; 500+ students admitted and provisioned.</li>
+            </ul>
+            <div class="proj-links">
+              <a class="proj-link" href="#celerscet">
+                Read the case study
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="proj-visual" aria-hidden="true">
+            <div class="pv-bar"><i></i><i></i><i></i><span class="addr">sahrdaya.celerscet.com</span></div>
+            <div class="pv-body" data-visual="erp"></div>
+          </div>
+          <span class="chip" style="position:absolute; top:18px; right:18px;">React · Node · Supabase · GCP</span>
+        </article>
+
+        <!-- 02 Hosting Cloudly -->
+        <article class="proj-feature reveal">
+          <div>
+            <p class="proj-idx">02 / Cloud platform</p>
+            <h3 class="proj-title">Hosting Cloudly</h3>
+            <p class="proj-tagline">Cloud hosting &amp; deployment platform · SenseSys</p>
+            <p class="proj-desc">
+              A platform that lets users deploy and manage hosted sites and apps through an intuitive
+              UI — domains, Linux hosting and WordPress deployment without touching a server.
+            </p>
+            <ul class="proj-facts">
+              <li><strong>Role</strong> — project lead of an 8-member team; built the React dashboard for uploads, deployment tracking and performance metrics.</li>
+              <li><strong>Engineering</strong> — REST integrations for auth, deployment status and log visualization; Supabase-backed data and auth; ~30% faster UI loads via lazy loading and asset optimization.</li>
+            </ul>
+            <div class="proj-links">
+              <span class="proj-link proj-link--soft">Private / client platform</span>
+            </div>
+          </div>
+          <div class="proj-visual" aria-hidden="true">
+            <div class="pv-bar"><i></i><i></i><i></i><span class="addr">hosting-cloudly · dashboard</span></div>
+            <div class="pv-body" data-visual="cloud"></div>
+          </div>
+          <span class="chip" style="position:absolute; top:18px; right:18px;">React · FastAPI · Supabase · Docker</span>
+        </article>
+
+        <!-- 03 ZeroCodeML -->
+        <article class="proj-feature reveal">
+          <div>
+            <p class="proj-idx">03 / No-code ML</p>
+            <h3 class="proj-title">ZeroCodeML</h3>
+            <p class="proj-tagline">No-code machine learning platform</p>
+            <p class="proj-desc">
+              Upload a CSV, get a trained model: automated EDA, smart model suggestions and progress
+              tracking — machine learning for people who don't write Python.
+            </p>
+            <ul class="proj-facts">
+              <li><strong>Role</strong> — led a 3-member team; designed the platform interface and built modular React components for model setup, data upload and training progress.</li>
+              <li><strong>Stack</strong> — React frontend over a Flask ML backend.</li>
+            </ul>
+            <div class="proj-links">
+              <a class="proj-link" href="https://zerocodeml-v1-0-peqk.onrender.com/" target="_blank" rel="noopener">
+                Live platform
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="proj-visual" aria-hidden="true">
+            <div class="pv-bar"><i></i><i></i><i></i><span class="addr">zerocodeml · auto-ml</span></div>
+            <div class="pv-body" data-visual="ml"></div>
+          </div>
+          <span class="chip" style="position:absolute; top:18px; right:18px;">React · Flask · scikit-learn</span>
+        </article>
+
+        <!-- 04 Satellite GAN -->
+        <article class="proj-feature reveal">
+          <div>
+            <p class="proj-idx">04 / Research → publication</p>
+            <h3 class="proj-title">Satellite Image Cloud Removal</h3>
+            <p class="proj-tagline">GAN-based enhancement · published with IEEE</p>
+            <p class="proj-desc">
+              Cloud cover cripples satellite imagery for agriculture and urban planning. This work
+              removes it with a GAN — a U-Net generator against a ResNet discriminator, trained with
+              Perlin-noise cloud synthesis and validated on EuroSAT with PSNR scoring.
+            </p>
+            <ul class="proj-facts">
+              <li><strong>Result</strong> — ~40% improvement in spatial accuracy and clarity over baseline models.</li>
+              <li><strong>Published</strong> — ICECCC 2025 (IEEE), CMR Institute of Technology, Bengaluru.</li>
+            </ul>
+            <div class="proj-links">
+              <a class="proj-link" href="https://ieeexplore.ieee.org/document/11063844" target="_blank" rel="noopener">
+                IEEE Xplore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+              <a class="proj-link proj-link--soft" href="https://github.com/Aleena24/srgan_cloud" target="_blank" rel="noopener">Code &amp; notebook</a>
+            </div>
+          </div>
+          <div class="proj-visual" aria-hidden="true">
+            <div class="pv-bar"><i></i><i></i><i></i><span class="addr">gan · cloud-removal · eurosat</span></div>
+            <div class="pv-body" data-visual="gan"></div>
+          </div>
+          <span class="chip" style="position:absolute; top:18px; right:18px;">Python · PyTorch · GANs</span>
+        </article>
+
+        <!-- more -->
+        <div class="proj-more-grid">
+          <a class="proj-mini reveal" href="https://github.com/Aleena24" target="_blank" rel="noopener">
+            <h4>HospSurv <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></h4>
+            <p>Hospital feedback platform — patient surveys with reward coupons, admin dashboards and real-time response tracking.</p>
+            <span class="stack">React · Supabase</span>
+          </a>
+          <a class="proj-mini reveal" data-delay="1" href="https://eduquest-yqcrxybweayjde5syi5jbx.streamlit.app/" target="_blank" rel="noopener">
+            <h4>EduQuest <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></h4>
+            <p>Generates MCQs and long-answer questions automatically from uploaded PDFs and web content.</p>
+            <span class="stack">Python · NLP · Streamlit</span>
+          </a>
+          <a class="proj-mini reveal" data-delay="2" href="https://aleena24.github.io/SpamShield/" target="_blank" rel="noopener">
+            <h4>SpamShield <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></h4>
+            <p>Smart email classifier with a minimal, responsive UI for visualizing classified messages.</p>
+            <span class="stack">ML · Streamlit</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SKILLS ============================ -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">05 · Capabilities</p>
+          <h2 class="section-title">The stack I operate.</h2>
+          <p class="section-lede">Not a wall of badges — each layer is something I've shipped and maintained in production.</p>
+        </div>
+
+        <div class="skills-stack">
+          <div class="skill-layer reveal">
+            <div class="skill-id">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
+              <div>
+                <div class="skill-name">Frontend</div>
+                <div class="skill-note">SPAs, PWAs, dashboard systems</div>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">JavaScript (ES6+)</span><span class="chip">React Router</span><span class="chip">MUI</span><span class="chip">Tailwind</span><span class="chip">HTML5 / CSS3</span>
+            </div>
+            <div class="skill-depth">daily · <b>production</b></div>
+          </div>
+
+          <div class="skill-layer reveal" data-delay="1">
+            <div class="skill-id">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="7" rx="2"/><rect x="2" y="13" width="20" height="7" rx="2"/><path d="M6 7.5h.01M6 16.5h.01"/></svg></div>
+              <div>
+                <div class="skill-name">Backend &amp; APIs</div>
+                <div class="skill-note">REST design, auth, service architecture</div>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST APIs</span><span class="chip">JWT auth</span><span class="chip">Flask</span><span class="chip">FastAPI</span><span class="chip">Nodemailer</span><span class="chip">Razorpay</span>
+            </div>
+            <div class="skill-depth">daily · <b>production</b></div>
+          </div>
+
+          <div class="skill-layer reveal">
+            <div class="skill-id">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M19 5l-2.8 2.8M7.8 16.2 5 19"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+              <div>
+                <div class="skill-name">AI / ML</div>
+                <div class="skill-note">Research to deployment</div>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">scikit-learn</span><span class="chip">GANs</span><span class="chip">Pandas / NumPy</span><span class="chip">NLP</span>
+            </div>
+            <div class="skill-depth">research + shipped · <b>IEEE ×1</b></div>
+          </div>
+
+          <div class="skill-layer reveal" data-delay="1">
+            <div class="skill-id">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V12c0 1.66 3.58 3 8 3s8-1.34 8-3V5.5"/><path d="M4 12v6.5c0 1.66 3.58 3 8 3s8-1.34 8-3V12"/></svg></div>
+              <div>
+                <div class="skill-name">Data</div>
+                <div class="skill-note">Schema design, integrity, caching</div>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Row-Level Security</span><span class="chip">Redis</span><span class="chip">MySQL</span><span class="chip">SQLite</span>
+            </div>
+            <div class="skill-depth">daily · <b>production</b></div>
+          </div>
+
+          <div class="skill-layer reveal">
+            <div class="skill-id">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-.42-8.98 6 6 0 0 0-11.4 1.68A3.5 3.5 0 0 0 6.5 19h11Z"/></svg></div>
+              <div>
+                <div class="skill-name">Cloud &amp; DevOps</div>
+                <div class="skill-note">CI/CD, runtime, storage, observability</div>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">Google Cloud</span><span class="chip">Cloud Run</span><span class="chip">Cloud Build</span><span class="chip">Cloud Storage</span><span class="chip">Artifact Registry</span><span class="chip">Secret Manager</span><span class="chip">Cloud Logging</span><span class="chip">Docker</span>
+            </div>
+            <div class="skill-depth">own the pipeline · <b>staging + prod</b></div>
+          </div>
+
+          <div class="skill-layer reveal" data-delay="1">
+            <div class="skill-id">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg></div>
+              <div>
+                <div class="skill-name">Engineering practice</div>
+                <div class="skill-note">The discipline that keeps systems alive</div>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="chip">Git / GitHub</span><span class="chip">Code review</span><span class="chip">Automated testing</span><span class="chip">Postman</span><span class="chip">CI pipelines</span><span class="chip">Documentation systems</span>
+            </div>
+            <div class="skill-depth">275 test files · <b>680+ PRs merged</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ RESEARCH ============================ -->
+    <section class="section section--tint" id="research">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">06 · Research</p>
+          <h2 class="section-title">Peer-reviewed work.</h2>
+        </div>
+
+        <div class="paper-feature reveal">
+          <div>
+            <span class="badge badge--live">IEEE · Published July 2025</span>
+            <h3>Enhancing Satellite Imagery with GAN-based Cloud Removal</h3>
+            <p class="venue">Presented at <strong>ICECCC 2025</strong>, CMR Institute of Technology, Bengaluru · Published in <strong>IEEE Xplore</strong></p>
+            <p class="paper-abstract">
+              Satellite imaging for agriculture, urban planning and environmental monitoring is
+              routinely blocked by cloud cover. This paper proposes a GAN-based removal method — a
+              U-Net generator with a ResNet discriminator, trained using Perlin-noise cloud
+              synthesis — with reconstruction quality verified through PSNR scoring on EuroSAT data.
+            </p>
+            <p class="paper-doi">DOI: <a href="https://doi.org/10.1109/ICECCC60120.2025.11063844" target="_blank" rel="noopener">10.1109/ICECCC60120.2025.11063844</a></p>
+          </div>
+          <div class="paper-side">
+            <div class="paper-stat">
+              <div class="big">~40%</div>
+              <p>improvement in spatial accuracy and clarity over baseline models</p>
+            </div>
+            <div class="paper-stat">
+              <div class="big">EuroSAT</div>
+              <p>benchmark dataset · GPU-accelerated training with tensor-level optimizations</p>
+            </div>
+            <div class="paper-actions">
+              <a class="proj-link" href="https://ieeexplore.ieee.org/document/11063844" target="_blank" rel="noopener">
+                View on IEEE Xplore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+              <a class="proj-link proj-link--soft" href="srgan_cloud.pdf" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-others">
+          <article class="paper-mini reveal">
+            <h4>Real-Image Super-Resolution using GANs</h4>
+            <p>SRGAN-based study on reconstructing high-resolution detail from real low-resolution photographs.</p>
+            <div class="links">
+              <a href="https://github.com/Aleena24/real-image-SRGAN" target="_blank" rel="noopener">Code &amp; notebook</a>
+              <a href="real.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            </div>
+          </article>
+          <article class="paper-mini reveal" data-delay="1">
+            <h4>Virtual Reality for Interior Design Presentation</h4>
+            <p>Study on applying VR walkthroughs to interior design presentation and client communication.</p>
+            <div class="links">
+              <a href="vr.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ RESUME ============================ -->
+    <section class="section" id="resume">
+      <div class="wrap">
+        <div class="resume-band reveal">
+          <p class="section-kicker mono" style="justify-content:center;">07 · Résumé</p>
+          <h3>The paper version.</h3>
+          <p>Full professional profile — experience, projects, publication and skills — formatted for recruiters and ATS systems alike.</p>
+          <div class="resume-actions">
+            <a class="btn btn--primary" href="resume/Aleena_Varghese_Resume.pdf" download>
+              Download PDF
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="resume.html">View in browser</a>
+          </div>
+          <p class="resume-note">Updated August 2026 · PDF, A4</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section section--tint" id="contact" style="padding-bottom: clamp(64px, 9vh, 110px);">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">08 · Contact</p>
+          <h2 class="section-title">Let's build something<br />that matters.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="contact-lede">
+              Whether it's a role, a collaboration, or a hard engineering problem — my inbox is open.
+              I usually reply within a day.
+            </p>
+            <a class="contact-email" href="mailto:aleenatheresa024@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+              aleenatheresa024@gmail.com
+            </a>
+            <div class="contact-meta">
+              <div class="row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+                <a href="tel:+919499719173">+91 94997 19173</a>
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Kerala, India</span>
+              </div>
+            </div>
+          </div>
+          <aside class="contact-card reveal" data-delay="1">
+            <h4>Elsewhere</h4>
+            <p>Code, career history and writing — pick your platform.</p>
+            <div class="contact-socials">
+              <a href="https://github.com/Aleena24" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.35.77 1.05.77 2.12v3.15c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                GitHub
+                <span class="handle">@Aleena24</span>
+              </a>
+              <a href="https://www.linkedin.com/in/aleena-varghese-atv024/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+                LinkedIn
+                <span class="handle">aleena-varghese-atv024</span>
+              </a>
+              <a href="https://medium.com/@alinavarghese009" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12ZM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12Z"/></svg>
+                Medium
+                <span class="handle">@alinavarghese009</span>
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Social Links -->
-  <div class="social-links">
-    <div class="social-label">Follow Me</div>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/aleena-varghese-atv024/" target="_blank" class="social-icon" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://github.com/Aleena24" target="_blank" class="social-icon" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://medium.com/@alinavarghese009" target="_blank" class="social-icon" aria-label="Medium">
-        <i class="fab fa-medium"></i>
-      </a>
-      <a href="https://www.instagram.com/__a_elena_ammu/" target="_blank" class="social-icon" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year">2026</span> Aleena Varghese</span>
+      <span class="footer-note">Designed &amp; engineered from scratch — vanilla JS · zero frameworks · zero trackers</span>
+      <a href="#home">Back to top ↑</a>
     </div>
-  </div>
+  </footer>
 
-  <!-- Contact Info -->
-  <div class="contact-info">
-    <a href="mailto:aleenatheresa024@gmail.com" class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <span>aleenatheresa024@gmail.com</span>
-    </a>
-    <a href="tel:9499719173" class="contact-item">
-      <i class="fas fa-phone"></i>
-      <span>+91 9499719173</span>
-    </a>
-  </div>
-  <script>
-    // Modern cursor effect
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
+  <button class="to-top" id="to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+  </button>
 
-    // Smooth cursor movement
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-
-    function animateCursor() {
-      cursorX += (mouseX - cursorX) * 0.1;
-      cursorY += (mouseY - cursorY) * 0.1;
-      
-      cursor.style.left = cursorX + 'px';
-      cursor.style.top = cursorY + 'px';
-      
-      requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    // Interactive elements hover effect
-    const interactiveElements = document.querySelectorAll('a, button, .btn, .social-icon, .nav-link');
-    
-    interactiveElements.forEach(element => {
-      element.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-hover');
-      });
-      
-      element.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-hover');
-      });
-    });
-
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
-
-    // Observe elements for animation
-    document.querySelectorAll('.stat-item, .hero-text, .hero-image').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Parallax effect for floating elements
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.floating-icon');
-      
-      parallaxElements.forEach((element, index) => {
-        const speed = 0.5 + (index * 0.1);
-        element.style.transform = `translateY(${scrolled * speed}px)`;
-      });
-    });
-  </script>
-
-  <!-- Header Script -->
-  <script src="header.js"></script>
+  <script src="js/scene.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
